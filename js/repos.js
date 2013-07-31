@@ -2,7 +2,8 @@ $( document ).ready(processRepos);
 var reposResponse;
 var categories = {
   "sample" : { "image" :"product", "name" : "Samples" },
-  "ci" : { "image" : "admin-scripts", "name" : "Continuous Integration" }
+  "ci" : { "image" : "admin-scripts", "name" : "Continuous Integration" },
+  "util" : { "image" : "osi", "name" : "Utilities }
 };
 
 function loadRepos(response) {
