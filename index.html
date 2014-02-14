@@ -6,52 +6,20 @@
 <head>
 
 <meta charset="UTF-8" />
-
-<!-- 
-Force IE8+ into Standards mode by default (now done with http header)
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
- -->
 
 <title>WASdev Open Source Community</title>
 
-
-<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.6 - http://yoast.com/wordpress/seo/ -->
-<link rel="canonical" href="https://www.ibmdw.net/wasdev/repo/" />
-<meta property='og:locale' content='en_US'/>
-<meta property='og:title' content='Liberty Repository - WASdev'/>
-<meta property='og:url' content='https://www.ibmdw.net/wasdev/repo/'/>
-<meta property='og:site_name' content='WASdev'/>
-<meta property='og:type' content='article'/>
-<!-- / Yoast WordPress SEO plugin. -->
-
-<link rel="alternate" type="application/rss+xml" title="WASdev &raquo; Feed" href="https://www.ibmdw.net/wasdev/feed/" />
-<link rel="alternate" type="application/rss+xml" title="WASdev &raquo; Comments Feed" href="https://www.ibmdw.net/wasdev/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="WASdev &raquo; Liberty Repository Comments Feed" href="https://www.ibmdw.net/wasdev/repo/feed/" />
-<link rel='stylesheet' id='rotatingtweets-css'  href='https://www.ibmdw.net/wasdev/wp-content/plugins/rotatingtweets/css/style.css?ver=3.5.1' type='text/css' media='all' />
-<link rel='stylesheet' id='cntctfrmStylesheet-css'  href='https://www.ibmdw.net/wasdev/wp-content/plugins/contact-form-plugin/css/style.css?ver=3.5.1' type='text/css' media='all' />
 <link rel="stylesheet" id="pnext_common-css" href="https://www.ibmdw.net/c/css/common.css?ver=0.1" type="text/css" media="screen">
 <link rel='stylesheet' id='pnext-css'  href='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/style.css?ver=0.1' type='text/css' media='screen' />
 <link rel='stylesheet' id='wasdev-css'  href='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext-wasdev/style.css?ver=3.5.1' type='text/css' media='all' />
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.1'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/plugins/rotatingtweets/js/jquery.cycle.all.min.js?ver=3.5.1'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/plugins/rotatingtweets/js/rotating_tweet.js?ver=3.5.1'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext-wasdev/js/google-analytics.js?ver=3.5.1'></script>
 <script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/js/modernizr-production.js?ver=2.6.2'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/js/google-analytics.js?ver=1.0'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/js/count-down.js?ver=1.0'></script>
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ibmdw.net/wasdev/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.ibmdw.net/wasdev/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 3.5.1" />
-<meta id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.5" />
-
 <meta name="description" content=""/>
-
-<link rel="pingback" href="https://www.ibmdw.net/wasdev/xmlrpc.php" /> 
 <link rel="shortcut icon" href="https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/css/favicon.ico" /> 
 
 
 <!-- This is the CSE for a topical site. It must be loaded in head, before google search Form -->
-
 	<script>//<![CDATA[ 
 
 		(function() {
@@ -81,7 +49,7 @@ Force IE8+ into Standards mode by default (now done with http header)
 
 </head>
 
-<body class="page page-id-715 page-template page-template-repository-php" >
+<body class="page page-template page-template-repository-php" >
 
 	
 <div class="pn-dw-master cf" role="banner"> 
@@ -99,7 +67,123 @@ Force IE8+ into Standards mode by default (now done with http header)
 </div>	
 	<div id="pnext-top-menu" class="pn-top-menu links-top-menu" role="navigation">
 		<div class="cf">
-		
+
+<style>
+.links-top-menu a,
+.links-top-menu a:visited { 
+  color: #dedede; 
+}
+
+.links-top-menu a:hover,
+.links-top-menu a:focus { 
+  color: #dedede;
+}
+
+.link-home a,
+.link-home a:visited { color: #ffffff; }
+
+.link-home a:hover,
+.link-home a:focus { 
+  color: #ffffff; 
+}
+
+
+.pn-top-menu {
+  border-top-color: #393566;
+  background: #2f2649; /* Old browsers */
+  background: -webkit-linear-gradient(top, #393566 0%,#2f2649 100%); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient(to bottom, #393566 0%, #2f2649 100%); /* W3C */
+    border-bottom-color: #3c3959;
+}
+
+.pn-nav-search-input {
+  border-color: #191825;
+  
+  background: #382d56; /* Old browsers */
+  background: transparent -webkit-linear-gradient(top, #1c1730 0,#382d56 35px, #eeeeee 150px, #ffffff 185px); /* Chrome10+,Safari5.1+ */
+  background: transparent linear-gradient(to bottom,  #1c1730 0,#382d56 35px, #eeeeee 150px, #ffffff 185px); /* W3C */
+  background-position: left top;
+  background-size: 100% 185px;	
+  }
+
+.pn-top-menu .menu-item {
+	float: left;
+}
+
+.pn-menu-wrap {
+	float: left;
+	margin-top: 4px;
+}
+
+.pn-nav-home {
+	font-size: 1em;
+	line-height: 1.5;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: bold;
+	text-shadow: 0 1px #333333;
+	padding-top: 1px;
+	margin-right: 2.75em;
+	margin-left: 2.2em;
+}
+
+.pn-logo-image {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.pn-top-menu .menu-item {
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial, sans-serif;
+	font-weight: 200;
+	line-height: 1.5;
+	margin-right: 2em;
+	vertical-align: middle;
+	}
+
+.pn-search {
+}
+
+.pn-btn {
+  color: #fff !important;
+}
+
+.pn-btn,
+.pn-btn-primary {
+  background-color: #5b2668;
+}
+
+.pn-btn:hover,
+.pn-btn:focus,
+.pn-btn-primary:hover,
+.pn-btn-primary:focus {
+  background-color: #7c348d;
+}
+
+.pn-btn-secondary { 
+  background-color: #26358f;
+}
+
+.pn-btn-secondary:hover,
+.pn-btn-secondary:focus {
+  background-color: #3044b5;
+}
+
+
+.pn-btn {
+  text-shadow: rgba(0,0,0,.25) 0 -1px 0;
+  border: 1px solid #eee;
+  border-color: rgba(255, 255, 255, 0.25) rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.10);
+  
+  box-shadow: inset 0 -1px 3px rgba(255,255,255,.2),
+        0 1px 5px rgba(0,0,0,.33);
+
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,.20) 0%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,.20) 0%, rgba(255,255,255,0) 100%);
+}
+
+
+</style>		
 			<div class="pn-menu-wrap">
 				<span class="link-home">
 					<a rel="home" class="pn-nav-home" href="https://www.ibmdw.net/wasdev"><img class="pn-logo-image" src="http://www.ibmdw.net/wasdev/wp-content/uploads/sites/9/2013/05/wasdev-wordmark.png" alt="WASdev" /></a>
@@ -172,6 +256,9 @@ Force IE8+ into Standards mode by default (now done with http header)
 		
 	
 	
+		  <p>Looking for more IBM Github Repos? Check out <a href="http://ibm.github.io/">http://ibm.github.io/</a></p>
+
+		
 		</section>		
 	</div>
 	
@@ -221,36 +308,7 @@ Force IE8+ into Standards mode by default (now done with http header)
 
 </div>
 
-    <script type="text/javascript">
-    // <![CDATA[
-        var disqus_shortname = 'devcentral';
-        (function () {
-            var nodes = document.getElementsByTagName('span');
-            for (var i = 0, url; i < nodes.length; i++) {
-                if (nodes[i].className.indexOf('dsq-postid') != -1) {
-                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
-                    url = nodes[i].parentNode.href.split('#', 1);
-                    if (url.length == 1) url = url[0];
-                    else url = url[1]
-                    nodes[i].parentNode.href = url + '#disqus_thread';
-                }
-            }
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + 'disqus.com/forums/' + disqus_shortname + '/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    //]]>
-    </script>
 <script type='text/javascript' src='js/reposfiltering.js?ver=2.0'></script>
 <script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/js/util.js?ver=3.5.1'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/themes/projectnext/js/download-overlay.js?ver=1.0'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var better_rss_widget_next_L10n = {"no_answer":"No answers","one_answer":"1 answer","many_answers":"answers","default_profile_image":"https:\/\/www.ibmdw.net\/wasdev\/wp-content\/plugins\/better-rss-widget-next\/img\/userphoto-noborder.png"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-content/plugins/better-rss-widget-next/js/next.js?ver=0.1'></script>
-<script type='text/javascript' src='https://www.ibmdw.net/wasdev/wp-includes/js/comment-reply.min.js?ver=3.5.1'></script>
 </body>
 </html>
