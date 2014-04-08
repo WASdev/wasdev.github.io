@@ -18,8 +18,7 @@ function processRepos() {
       var repo = repos[i];
       var category = repo.name.substr(0, repo.name.indexOf('.'));
     
-      if (category != "wasdev") {
-        if ( categories[category].show ) {
+        if ( categories.hasOwnProperty(category) && categories[category].show ) {
           if ( $( "#" + category ).length == 0) {
             var newCategory = $('<div id="' + category + '" class="pn-col-6-2">' +
               '<a class="pn-btn-action pn-category-filter mbm" data-filter="' + category + '" href="#category:' + category +'">' +
@@ -52,7 +51,6 @@ function processRepos() {
           newElement.appendTo( "#pn-repo-listing" );
         }
       }
-    }
     RepoFilter.init();
   }
 }
