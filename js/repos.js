@@ -3,7 +3,7 @@ var reposResponse;
 var categories = {
   "sample" : { "image" :"product", "name" : "Samples", "show" : true },
   "ci" : { "image" : "admin-scripts", "name" : "Continuous Integration", "show" : true },
-  "util" : { "image" : "osi", "name" : "Utilities", "show" : true }
+  "util" : { "image" : "osi", "name" : "Utilities", "show" : true },
   "labs" : { "image" : "", "name" : "Labs", "show" : false }
 };
 
