@@ -20,7 +20,7 @@ var RepoFilter = {
 	
 	// options
 	o: {
-		items_on_page: 10,
+		items_on_page: 100,
 		paginate: false,
 		prev_text: '&larr; Prev',
 		next_text: 'Next &rarr;',
