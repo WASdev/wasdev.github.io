@@ -14,6 +14,8 @@ function loadRepos(response) {
 function processRepos() {
   if (reposResponse.status = 200) {
     var repos = reposResponse.data;
+    repos.sort(function(a,b) {return a.name.localeCompare(b.name)});
+
     for (var i = 0; i < repos.length; i++) {
       var repo = repos[i];
       var category = repo.name.substr(0, repo.name.indexOf('.'));
