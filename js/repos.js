@@ -4,7 +4,7 @@ var categories = {
   "sample" : { "image" :"product", "name" : "Samples", "show" : true },
   "ci" : { "image" : "admin-scripts", "name" : "Continuous Integration", "show" : true },
   "util" : { "image" : "osi", "name" : "Utilities", "show" : true },
-  "lab" : { "image" : "", "name" : "Labs", "show" : false }
+  "lab" : { "image" : "", "name" : "Labs", "show" : true }
 };
 
 function loadRepos(response) {
