@@ -259,7 +259,7 @@
                 			<div class="pn-col-6-2">
                   				<div class="pn-repo-footer">
                     				<footer class="pn-post-meta pn-asset-meta">
-                      				{{repo.updated_at}}
+                      				{{repo.updated_at | date : short : timezone}}
                     				</footer>
                   				</div>
 							</div>
