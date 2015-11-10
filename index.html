@@ -254,18 +254,18 @@
 					<div class="pn-columns">
 						<div class="pn-col-6-4">
 							<header class="pn-repo-header">
-								<h3><a href=" + repo.html_url + "> + repo.name + </a></h3>
+								<h3><a href="{{repo.html_url}}"> {{repo.name}} </a></h3>
 							</header>
-							<div class="pn-repo-content">' +
-                    			<p>' + repo.description + '</p>'s
-                 			</div>' +
-                		</div>' +
-                		<div class="pn-col-6-2">' +
-                  			<div class="pn-repo-footer">' +
-                    			<footer class="pn-post-meta pn-asset-meta">' +
-                      			' + new Date(repo.updated_at).toLocaleDateString() +
-                    			</footer>' +
-                  			</div>' +
+							<div class="pn-repo-content">
+                    			<p>{{repo.description}}</p>
+                 			</div>
+                		</div>
+                		<div class="pn-col-6-2">
+                  			<div class="pn-repo-footer">
+                    			<footer class="pn-post-meta pn-asset-meta">
+                      			{{repo.updated_at}}
+                    			</footer>
+                  			</div>
 						</div>
 					</div>
 				</div>
