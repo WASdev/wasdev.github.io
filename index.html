@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html ng-app="app">
 <!--[if lt IE 7]>      <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9"> <![endif]-->
@@ -49,7 +49,7 @@
 
 </head>
 
-<body class="page page-template page-template-repository-php" >
+<body ng-controller ="githubController" class="page page-template page-template-repository-php" >
 
 <div class="pn-dw-master cf" role="banner">
 
@@ -250,9 +250,25 @@
 	<div class="mtxl">
 
 
-				<div id="pn-repo-listing" class="pn-repo-listing">
-
-			</div>
+				<div id="pn-repo-listing" class="pn-repo-listing" ng-repeat = "repo in repoData">
+					<div class="pn-columns">
+						<div class="pn-col-6-4">
+							<header class="pn-repo-header">
+								<h3><a href=" + repo.html_url + "> + repo.name + </a></h3>
+							</header>
+							<div class="pn-repo-content">' +
+                    			<p>' + repo.description + '</p>'s
+                 			</div>' +
+                		</div>' +
+                		<div class="pn-col-6-2">' +
+                  			<div class="pn-repo-footer">' +
+                    			<footer class="pn-post-meta pn-asset-meta">' +
+                      			' + new Date(repo.updated_at).toLocaleDateString() +
+                    			</footer>' +
+                  			</div>' +
+						</div>
+					</div>
+				</div>
 
 
 
