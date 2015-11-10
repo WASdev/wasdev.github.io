@@ -250,22 +250,24 @@
 	<div class="mtxl">
 
 
-				<div id="pn-repo-listing" class="pn-repo-listing" ng-repeat = "repo in repoData">
-					<div class="pn-columns">
-						<div class="pn-col-6-4">
-							<header class="pn-repo-header">
-								<h3><a href="{{repo.html_url}}"> {{repo.name}} </a></h3>
-							</header>
-							<div class="pn-repo-content">
-                    			<p>{{repo.description}}</p>
-                 			</div>
-                		</div>
-                		<div class="pn-col-6-2">
-                  			<div class="pn-repo-footer">
-                    			<footer class="pn-post-meta pn-asset-meta">
-                      			{{repo.updated_at}}
-                    			</footer>
-                  			</div>
+				<div id="pn-repo-listing" class="pn-repo-listing" >
+					<div  ng-repeat = "repo in repoData" class="pn-repo-item" data-tag="all">
+						<div class="pn-columns">
+							<div class="pn-col-6-4">
+								<header class="pn-repo-header">
+									<h3><a href="{{repo.html_url}}"> {{repo.name}} </a></h3>
+								</header>
+								<div class="pn-repo-content">
+	                    			<p>{{repo.description}}</p>
+	                 			</div>
+                			</div>
+                			<div class="pn-col-6-2">
+                  				<div class="pn-repo-footer">
+                    				<footer class="pn-post-meta pn-asset-meta">
+                      				{{repo.updated_at}}
+                    				</footer>
+                  				</div>
+							</div>
 						</div>
 					</div>
 				</div>
