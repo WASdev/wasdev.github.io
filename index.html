@@ -41,15 +41,10 @@
 
 	</script>
 
-       <script type='text/javascript' src="js/repos.js"></script>
-<!--       <script type='text/javascript' src="js/repos.json"></script>-->
-
-       <script type='text/javascript' src="https://api.github.com/orgs/WASdev/repos?callback=loadRepos&per_page=1000"></script>
-
 
 </head>
 
-<body ng-controller ="githubController" class="page page-template page-template-repository-php" >
+<body ng-controller="gitHubDataController" class="page page-template page-template-repository-php" >
 
 <div class="pn-dw-master cf" role="banner">
 
@@ -251,7 +246,7 @@
 
 
 				<div id="pn-repo-listing" class="pn-repo-listing" >
-					<div  ng-repeat = "repo in repoData" class="pn-repo-item" data-tag="all">
+					<div  ng-repeat="repo in repoData | orderBy:predicate:reverse" class="pn-repo-item" data-tag="all">
 						<div class="pn-columns">
 							<div class="pn-col-6-4">
 								<header class="pn-repo-header">
@@ -325,7 +320,6 @@
 	</div>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="js/app.js" charset="utf-8"></script>
 
 <script type='text/javascript' src='js/reposfiltering.js'></script>
