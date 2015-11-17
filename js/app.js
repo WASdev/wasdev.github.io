@@ -2,15 +2,15 @@ var app = angular.module("app", ['ngRoute']);
 
 app.config(function ($routeProvider) {
     $routeProvider
-    .when('/', {
+    .when('/all', {
         controller: 'MainController',
         templateUrl: 'views/all.html'
     })
-    .when('/samples', {
+    .when('/devops', {
         controller: 'MainController',
-        templateUrl: 'views/samples.html'
+        templateUrl: 'views/devops.html'
     })
     .otherwise({
-        redirectTo: '/'
+        redirectTo: '/all'
     });
 });
