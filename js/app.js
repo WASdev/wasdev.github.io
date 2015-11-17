@@ -1,8 +1,14 @@
-angular.module('app', [])
-.controller('gitHubDataController', ['$scope', '$http', function($scope, $http) {
+var app = angular.module("app", ['ngRoute']);
 
-		$http.get("https://api.github.com/orgs/WASdev/repos?per_page=100")
-			.success(function(data) {
-				$scope.repoData = data;
-		});
-}]);
+app.config(function ($routeProvider) {
+    $routeProvider
+    .when('/', {
+        templateUrl: 'views/all.html'
+    })
+    .when('/samples', {
+        templateUrl: 'views/samples.html'
+    })
+    .otherwise({
+        redirectTo: '/'
+    });
+});

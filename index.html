@@ -13,7 +13,7 @@
 <link rel="stylesheet" id="pnext_common-css" href="style/common.css" type="text/css" media="screen">
 <link rel='stylesheet' id='pnext-css'  href='style/style.css' type='text/css' media='screen' />
 <link rel='stylesheet' id='wasdev-css'  href='style/wasdev-style.css' type='text/css' media='all' />
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js?ver=3.5.1'></script>
 <meta name="description" content=""/>
 <link rel="shortcut icon" href="images/favicon.ico" />
@@ -44,7 +44,7 @@
 
 </head>
 
-<body ng-controller="gitHubDataController" class="page page-template page-template-repository-php" >
+<body ng-controller="MainController" class="page page-template page-template-repository-php" >
 
 <div class="pn-dw-master cf" role="banner">
 
@@ -246,7 +246,7 @@
 
 
 				<div id="pn-repo-listing" class="pn-repo-listing" >
-					<div  ng-repeat="repo in repoData | orderBy: '-pushed_at'" class="pn-repo-item" data-tag="all">
+					<div  ng-repeat="repo in repos | orderBy: '-pushed_at'" class="pn-repo-item" data-tag="all">
 						<div class="pn-columns">
 							<div class="pn-col-6-4">
 								<header class="pn-repo-header">
@@ -320,6 +320,20 @@
 	</div>
 
 </div>
-<script src="js/app.js" charset="utf-8"></script>
+
+
 </body>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controller -->
+<script src="js/controllers/MainController.js"></script>
+
+<!-- Services -->
+<script src="js/services/github.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/appinfo.js"></script>
+
 </html>

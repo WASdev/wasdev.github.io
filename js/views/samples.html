@@ -1,0 +1,21 @@
+<div id="pn-repo-listing" class="pn-repo-listing" >
+    <div  ng-repeat="repo in samples | orderBy: '-pushed_at'" class="pn-repo-item" data-tag="all">
+        <div class="pn-columns">
+            <div class="pn-col-6-4">
+                <header class="pn-repo-header">
+                    <h3><a href="{{repo.html_url}}"> {{repo.name}} </a></h3>
+                </header>
+                <div class="pn-repo-content">
+                    <p>{{repo.description}}</p>
+                </div>
+            </div>
+            <div class="pn-col-6-2">
+                <div class="pn-repo-footer">
+                    <footer class="pn-post-meta pn-asset-meta">
+                    {{repo.pushed_at | date : medium }}
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
