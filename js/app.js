@@ -1,6 +1,6 @@
-var app = angular.module("app", ['ngRoute']);
+var app = angular.module("app", []);
 
-app.config(function ($routeProvider) {
+/*app.config(function ($routeProvider) {
     $routeProvider
     .when('/all', {
         controller: 'MainController',
@@ -14,3 +14,20 @@ app.config(function ($routeProvider) {
         redirectTo: '/all'
     });
 });
+
+/*app.filter('unique', function() {
+    return function(collection,keyname) {
+        var output = [],
+        var keys = [];
+
+        angular.forEach(collection, function(item) {
+            var key = item[keyname];
+            if(keys.indexOf(key) == -1) {
+                keys.push(key);
+                output.push(item);
+            }
+        });
+        return output;
+    };
+});
+*/
