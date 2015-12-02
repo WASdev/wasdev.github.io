@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.pn-home-wrap {
+    padding-top: 30px;
+}
+
+.pn-home-wrap .pn-page-title {
+    margin-bottom: 40px;
+	padding-top:30px !Important;
+}
+
+.pn-home-wrap .pn-col-5-3 {
+	padding-right:50px;
+}
+
+div.wp-polls p {
+    font-family: arial;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    padding-bottom: 15px;
+}
+
+.wp-polls .Buttons {
+    background-color: #ffffff;
+    border: 1px solid #C8C8C8;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 15px;
+    padding: 6px 20px !important;
+	margin-top:10px;
+}
+
+.wp-polls-ul {
+    margin: 0;
+}
+
+div.wp-polls li {
+    font-size: 90%;
+	padding-bottom:10px;
+}
+
+.links-footer a, .links-footer a:visited {
+    color: #E6E6E9;
+}
+
+.pn-page-header .pn-page-title {
+    margin-bottom: 40px;
+    padding-top: 60px;
+}
+
+
+.wp-polls INPUT {
+	   float: left;
+}
+
+.wp-polls LABEL {
+    float: left;
+    line-height: 19px;
+    margin-top: -3px;
+    padding-left: 10px;
+    width: 80%;
+}
+
+.wp-polls, .wp-polls-form {
+    background: none repeat scroll 0 0 #EFEFEF;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+	padding-right:10px;
+}
+
+#content p.rtw_main, p.rtw_main, div.rtw_main {
+    font-size: 14px;
+}
+
+
+#events-page-right {
+    float: right;
+    margin-top: -10px;
+    width: 33%;
+}
+
+#events-page-left {
+    width: 60%;
+}
+
+.blog .pn-columns, .pn-tabs-content {
+	margin-top:60px;
+}
+
+.tabletext {
+font-size: 80%;
+}

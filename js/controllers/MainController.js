@@ -5,7 +5,13 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
 
         $scope.click = function(filter) {
             $scope.myFilter = filter;
-            console.log('It works!!!!!!!');
+        };
+
+        //style function
+         $scope.selectedIndex = 0;
+
+        $scope.styleClick = function ($index) {
+            $scope.selectedIndex = $index;
         };
 
         //create categories array
@@ -46,10 +52,6 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
             $scope.arrayOfWords = [];
         });
 
-        console.log($scope.arrayOfCategories);
-            console.log($scope.myFilter);
-
     });
-
 
 }]);

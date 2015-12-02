@@ -1,0 +1,540 @@
+/*
+Theme Name:     WASdev (a Project Next child theme)
+Theme URI:      http://nextweb02.torolab.ibm.com/wasdev/
+Description:    Theme for the WASdev site, based on the parent Project Next theme
+Template:       projectnext
+Version:        0.0.1
+*/
+
+/*** ProjectNext going Responsive ***/
+/* Base / Mobile Styles begin here */
+html, body {
+	overflow-x: hidden;
+}
+.flag, .flag-bd {
+	display: block;
+}
+.flag-img, .pn-nav-home {
+	white-space: initial;
+}
+.flag-img {
+	text-align: left;
+}
+.menu-item {
+	display:block;
+	float:left;
+	text-align:center;
+	width:100%;
+	padding:1%
+}
+#button-menu {
+	background: url('images/hamburger.png') no-repeat 93% 0%;
+	color: #999;
+	cursor: pointer;
+	margin-top: -30px; /*-20px;*/
+	padding-right: 45px;
+	text-align: right;
+}
+	#button-menu a {
+		font-size: 0;
+		line-height: 0;
+		color: transparent;
+	}
+	#button-menu.active {
+		background: url('images/X.png') no-repeat 93% 2%;
+	}
+.pn-top-menu-container > ul, .pn-search {
+	display: none;
+	padding-right: 45px;
+	margin-right: 0;
+	width: 100%;
+}
+.pn-top-menu-container > ul {
+	border-top: solid 1px #999;
+	margin-top: 15px;
+	padding-top: 10px;
+}
+.pn-search {
+	/*float: right;*/
+	display: none;
+}
+.useeme {
+	display: block!important;
+}
+
+#button-menu a {
+	cursor: pointer;
+}
+@media screen and (min-width: 480px) {
+	#button-menu {
+		margin-top: -25px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.flag {
+		display: table;
+	}
+	.flag-bd {
+		display: table-cell;
+		padding: 0;
+	}
+	#button-menu {
+		display: none;
+	}
+	.pn-top-menu-container > ul {
+		border-top: none;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.pn-top-menu-container > ul, .pn-search {
+		display: block;
+		padding: 0;
+	}
+	.menu-item {
+		margin-right: 1em!important;
+		text-align: left;
+		width: auto;
+	}
+	.sub-menu {
+		display: none;
+		/*background-color: #000;*/
+		background: transparent linear-gradient(to bottom, #51535B 0%, #1C1C1E 100%) repeat scroll 0% 0%;
+		margin-left: -14px;
+		padding: 0 10px;
+		position: absolute;
+		z-index: 100;
+	}
+		.sub-menu .menu-item {
+			float: none;
+		}
+		.pn-top-menu-container > ul .menu-item:hover .sub-menu {
+			display: block;
+		}
+	.pn-search {
+		display: block;
+		margin-right: 5px;
+	}
+		.pn-search-input {
+			width: 20px;
+		}
+			.pn-search-input:active, .pn-search-input:focus {
+				width: 250px;
+			}
+}
+@media screen and (min-width: 1098px) {
+	.pn-search {
+		margin-right: 45px;
+	}
+	.pn-search-input {
+		width: 250px;
+	}
+}
+
+/* WASdev Homepage Redesign 2015 */
+/* BASE STYLES - Mobile Styles */
+a,
+a:visited,
+.links-std a,
+.links-std a:visited {
+	color: #008ABF;
+}
+	a:hover,
+	a:active,
+	a:focus,
+	.links-std a:hover,
+	.links-std a:active,
+	.links-std a:focus,
+	.pn-tree > li > a:hover {
+		color: #00649d;
+	}
+h2 {
+	font-size: 28px;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+.button {
+	margin-top: 40px;
+}
+	.button a,
+	.pn-btn,
+	.pn-btn-primary,
+	.pn-btn-secondary {
+		background-color: #ffffff;
+		border: solid 3px #00649d;
+		border-radius: 2px;
+		color: #00649d!important;
+		padding: 10px 20px;
+	}
+	/*.button a:hover {
+		background-color: #00649d;
+		color: #ffffff!important;
+	}*/
+	.button a:hover,
+	.pn-btn:hover,
+	.pn-btn-primary:hover,
+	.pn-btn-secondary:hover {
+		background-color: #00649d;
+		border-color: #00649d;
+		color: #ffffff!important;
+	}
+.codeblock {
+	padding: 0;
+}
+.pn-columns {
+	padding: 0;
+}
+.pn-leadspace .pn-columns {
+	padding: 20px 0;
+}
+	.pn-leadspace,
+	.blue {
+		background-color: #00649D;
+		color: #ffffff;
+		padding: 20px 0;
+	}
+.pn-leadspace .button a,
+.blue .button a {
+	background-color: #00649d;
+	border-color: #ffffff;
+	color: #ffffff!important;
+	display: block;
+	text-align: center;
+}
+	.pn-leadspace .button a:hover,
+	.blue .button a:hover {
+		background-color: #ffffff;
+		color: #00649d!important;
+	}
+	.pn-leadspace .button a,
+	.blue .button a,
+	.button a {
+		display: block;
+		margin-bottom: 10px;
+	}
+.pn-leadspace > div {
+	background-position: -1000px 30px!important;
+}
+	.pn-leadspace h1 {
+		font-size: 40px;
+		padding-top: 0;
+		text-shadow: 1px 1px #333333;
+	}
+	.pn-leadspace h1 span {
+		font-size: 36px;
+		font-weight: 700;
+	}
+	.pn-leadspace .tagline {
+		color: #ffffff;
+		text-shadow: 1px 1px #333333;
+	}
+	.pn-leadspace .cta {
+		margin-top: 20px;
+		text-shadow: 1px 1px #333333;
+	}
+	.pn-leadspace .cta a {
+		color: #ffffff;
+		font-size: 12px;
+	}
+	.pn-leadspace .pn-columns {
+		padding: 20px 0;
+	}
+.pn-leadspace,
+.blue {
+	background-color: #00649D;
+	color: #ffffff;
+}
+	.blue a {
+		color: #ffffff;
+	}
+.rotatingtweets {
+	background-color: #e0e0e0;
+	color: #008ABF;
+	font-size: 12px;
+	padding: 9px 0 5px 0;
+}
+	.rotatingtweets .pn-pcon {
+		background: url(images/twitter.png) no-repeat 0px 10px;
+		text-indent: 40px;
+	}
+	.rotatingtweet p.rtw_main {
+		text-indent: 0;
+		padding-left: 10px;
+	}
+.blue ul {
+	padding: 20px 0;
+}
+	.blue li {
+		list-style: disc;
+		padding: 10px 0 10px 20px;
+	}
+.cc2 {
+	padding-top: 20px;
+}
+	.cc2 h2 {
+		color: #00649D;
+	}
+.cc3 .padding-left, .cc3 .padding-right {
+	margin: 40px 0;
+}
+.codeblock {
+	padding: 60px 0;
+}
+.posts {
+	margin: 40px 0;
+}
+	.posts h2 {
+		color: #00649D;
+	}
+	.posts .post-meta {
+		color: #00649D;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.posts .title {
+		color: #008ABF;
+		font-weight: 700;
+	}
+.post {
+	padding: 15px 0;
+}
+#meet-the-developers {
+	text-align: center;
+}
+.mbxl {
+	margin-bottom: 0!important; /* overriding an !important from common.css */
+}
+/* Begin Larger Screens */
+@media only screen and (min-width: 480px) {
+}
+@media only screen and (min-width: 600px) {
+	.pn-columns .pn-col-3-2, .pn-columns .pn-col-3-1 {
+		display: inline-block;
+	}
+	.pn-leadspace .button a {
+		margin-left: 20%;
+	}
+}
+@media only screen and (min-width: 750px) {
+    #pnext-search-input {
+        width: 45px;
+    }
+    #pnext-search-input:focus,
+    #pnext-search-input:active {
+        width: 255px;
+    }
+
+	.pn-leadspace .button a {
+		margin-left: 0;
+		width: 80%;
+	}
+	.blue .button a,
+	.button a {
+		margin-left: auto;
+		margin-right: auto;
+		width: 30%;
+	}
+	.pn-leadspace {
+		padding: 0;
+	}
+		.pn-leadspace > div {
+			background-position: -130px 30px!important;
+		}
+		.pn-leadspace .text-gutter {
+			margin-left: 30%;
+		}
+	.posts {
+		margin: 0;
+	}
+	.posts.news {
+		padding-right: 40px;
+	}
+	.posts.docs {
+		padding-left: 40px;
+	}
+	.post {
+		min-height: 175px;
+	}
+	.cc3 .padding-left {
+		margin-left: 150px;
+	}
+	.cc3 .padding-right {
+		margin-right: 150px;
+	}
+}
+@media only screen and (min-width: 965px) {
+    .pn-top-menu-container {
+        font-size: 1.1em;
+    }
+}
+@media only screen and (min-width: 1024px) {
+	.pn-leadspace > div {
+		background-position: -100px 30px!important;
+	}
+}
+@media only screen and (min-width: 1100px) {
+}
+@media only screen and (min-width: 1200px) {
+	.pn-leadspace .text-gutter {
+		margin-left: 20%;
+	}
+    #pnext-search-input {
+        width: 230px;
+    }
+}
+@media only screen and (min-width: 1350px) {
+    #pnext-search-input {
+        width: 260px;
+    }
+	.pn-leadspace > div {
+		background-position: -30px 30px!important;
+	}
+	.pn-leadspace .text-gutter {
+		margin-left: 10%;
+	}
+}
+@media only screen and (min-width: 1500px) {
+   	.pn-top-menu-container > ul {
+   		margin-left: 2.5em;
+   	}
+	.pn-leadspace .text-gutter {
+		margin-left: 0%;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.pn-top-menu-container {
+		font-size: 1.3em;
+	    padding-left: 30px;
+	}
+    .pn-leadspace > div {
+        background-position: 0px 30px!important;
+    }
+}
+@media only screen and (min-width: 1700px) {
+	.pn-top-menu-container {
+	    padding-left: 130px;
+	}
+	.pn-leadspace > div {
+		background-position: 30px 30px!important;
+	}
+}
+/* end Hompage Redesign */
+
+/* WASdev purple-ing */
+	.pn-leadspace {
+		border-top-color: #00649D;
+		background: #00649D;
+	}
+
+	.pn-page-title {
+		color: #325c80;
+	}
+
+	.pn-copy blockquote {
+		color: #325c80;
+		background-color: #EFEFEF;
+		border-left: 0;
+	}
+
+	/* SWOOOOOSH */
+	.pn-footer {
+		background: #464646 no-repeat 15px 0;
+	}
+
+/* end Purple-ing */
+
+#wasdev_repo_listing {
+	overflow: hidden; /* prevent page scroll when repo items fly out */
+}
+
+.pn-repo-listing-header {
+	padding-bottom: 10px;
+	border-bottom: 3px solid #c3c3d1;
+}
+
+.pn-repo-listing-footer {
+	padding-top: 10px;
+	border-top: 3px solid #c3c3d1;
+}
+
+.pn-repo-listing-header,
+.pn-repo-listing-footer {
+	vertical-align: middle;
+	line-height: 1;
+}
+
+.pn-page-header .pn-asset-meta {
+	margin-top: -2em;
+}
+
+.pn-repo-item {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	overflow: hidden;
+	max-height: 70em; /* way too large; will get overridden in JS ... or maybe it's a feature? */
+	/* don't apply margin/padding here so that the max-height animation has the most impact */
+}
+
+.pn-repo-header,
+.pn-repo-footer {
+	margin-top: 2em;
+}
+
+.pn-repo-content {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.pn-repo-download {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.pn-repo-item+.pn-repo-item {
+	border-top: 1px solid #e5e5e5;
+}
+
+.pn-repo-item.is-out {
+	opacity: 0;
+	max-height: 0;
+	-webkit-transform: translateX( 150% );
+	-moz-transform: translateX( 150% );
+	-o-transform: translateX( 150% );
+	-ms-transform: translateX( 150% );
+	transform: translateX( 150% );
+}
+
+.pn-repo-pagination {
+	text-align: center;
+}
+
+.pn-repo-pagination-prev { margin-right: 20px; }
+.pn-repo-pagination-next { margin-left: 20px; }
+
+.pn-repo-pagination .is-disabled {
+	opacity: .3;
+	cursor: default;
+}
+
+.lt-ie9 .pn-repo-pagination .is-disabled { color: #bbb; }
+
+.pn-fb-image-hover:hover {
+	background-color: rgba(146,91,158,.8);
+}
+
+.gplus-footer {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	background-image: url( 'css/google-plus-20.png' );
+    width: 20px; height: 18px;
+}
+
+
+.pn-footer-menu-item {
+  margin: 0.25em 0.65em 0.65em !important;
+}
