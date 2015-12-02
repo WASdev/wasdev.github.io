@@ -472,11 +472,11 @@ background: none repeat scroll 0% 0% white !important;
 
 
 		<div id="githubCategories">
-            <div ng-click="click(null)" class="githubFilter">
+            <div ng-click="click(null); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
                 All Repositories
             </div>
 
-            <div ng-repeat="tag in arrayOfTags track by $index" ng-click="click(tag); styleClick($index) " ng-class="{ 'selected-class-name': $index == selectedIndex }">
+            <div ng-repeat="tag in arrayOfTags track by $index" ng-click="click(tag); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
                 {{tag}}
             </div>
         </div>

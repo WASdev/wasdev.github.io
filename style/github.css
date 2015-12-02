@@ -1,3 +1,5 @@
+/*Adam Fielding's Custom CSS for the github repo page */
+
 .githubFilter {
     display: inline-block;
     color: #00649D;
@@ -25,7 +27,30 @@
     cursor: pointer;
     background-color: #00649d;
     color:#fff;
+}
 
+.githubFilterActive {
+    cursor: pointer;
+    background-color: #00649d;
+    color:#fff;
+    display: inline-block;
+    border: 2px solid #00649D;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+    width: 200px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    border: 2px solid #00649D;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 #moreIBMRepos {

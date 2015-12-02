@@ -1,3 +1,5 @@
+/*Adam Fielding's angular controller for the github repo page */
+
 app.controller('MainController', ['$scope', 'github', function($scope, github) {
 
     github.success(function(data) {
@@ -8,10 +10,10 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
         };
 
         //style function
-         $scope.selectedIndex = 0;
+        $scope.selectedIndex = -1;
 
-        $scope.styleClick = function ($index) {
-            $scope.selectedIndex = $index;
+        $scope.select= function(i) {
+            $scope.selectedIndex=i;
         };
 
         //create categories array
