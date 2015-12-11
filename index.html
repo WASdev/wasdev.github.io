@@ -435,8 +435,9 @@ background: none repeat scroll 0% 0% white !important;
 				<h1 class="pn-page-title">GitHub Repositories</h1>
 			</header>
 
-			<p class="pn-nav-links mbm">Filter by type:</p>
-
+            <form>
+			     <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
+            </form>
 
 		<div id="githubCategories">
             <div ng-click="click(null); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
@@ -452,7 +453,17 @@ background: none repeat scroll 0% 0% white !important;
 
         <!-- where the views are inserted -->
             <div id="pn-repo-listing" class="pn-repo-listing" >
-                <div  ng-repeat="object in arrayOfCategories | filter: myFilter | orderBy: '-repositoryData.pushed_at'" class="pn-repo-item" data-tag="all">
+                <div class="pn-repo-item" data-tag="all">
+                    <div class="pn-columns">
+                        <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
+                        <div class="pn-col-6-2">
+                            <a href="#" ng-click="changeOrder()">Date Updated <span ng-show="reverseSort">&#x25B2;</span>
+                            <span ng-show="!reverseSort">&#x25BC;</span></a>
+
+                        </div>
+                    </div>
+                </div>
+                <div  ng-repeat="object in arrayOfCategories | filter: myFilter | filter: searchRepos | orderBy: sortType:reverseSort" class="pn-repo-item" data-tag="all">
                     <div class="pn-columns">
                         <div class="pn-col-6-4">
                             <header class="pn-repo-header">
@@ -463,6 +474,7 @@ background: none repeat scroll 0% 0% white !important;
                             </div>
                         </div>
                         <div class="pn-col-6-2">
+
                             <div class="pn-repo-footer">
                                 <footer class="pn-post-meta pn-asset-meta">
                                 {{object.repositoryData.pushed_at | date : medium }}

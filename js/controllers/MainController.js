@@ -9,6 +9,19 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
             $scope.myFilter = filter;
         };
 
+        //sorting function and variables
+        $scope.sortType = '-repositoryData.pushed_at'
+        $scope.reverseSort = false
+
+        $scope.changeSortType = function(sortType) {
+            $scope.sortType = sortType;
+        }
+
+        $scope.changeOrder = function() {
+            $scope.reverseSort = !$scope.reverseSort;
+        }
+
+
         //style function
         $scope.selectedIndex = -1;
 
