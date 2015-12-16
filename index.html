@@ -457,13 +457,13 @@ background: none repeat scroll 0% 0% white !important;
                     <div class="pn-columns">
                         <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
                         <div class="pn-col-6-2">
-                            <a href="#" ng-click="changeOrder()">Date Updated <span ng-show="reverseSort">&#x25B2;</span>
+                            <a href="#" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
                             <span ng-show="!reverseSort">&#x25BC;</span></a>
 
                         </div>
                     </div>
                 </div>
-                <div  ng-repeat="object in arrayOfCategories | filter: myFilter | filter: searchRepos | orderBy: sortType:reverseSort" class="pn-repo-item" data-tag="all">
+                <div  ng-repeat="object in arrayOfCategories | filter: myFilter | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
                     <div class="pn-columns">
                         <div class="pn-col-6-4">
                             <header class="pn-repo-header">
@@ -487,7 +487,7 @@ background: none repeat scroll 0% 0% white !important;
 
 
         <div id="moreIBMRepos">
-		    Looking for more IBM Github Repos? Check out <a href="http://ibm.github.io/">http://ibm.github.io/</a>
+		    Looking for more IBM GitHub repositories? Check out <a href="http://ibm.github.io/">http://ibm.github.io/</a>
         </div>
 
 		</section>
