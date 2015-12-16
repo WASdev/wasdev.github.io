@@ -2,8 +2,8 @@
 
 app.controller('MainController', ['$scope', 'github', function($scope, github) {
 
-    github.success(function(data) {
-        $scope.repos = data;
+    github.success(function(response) {
+        $scope.repos = response;
 
         $scope.click = function(filter) {
             $scope.myFilter = filter;
@@ -28,6 +28,9 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
         $scope.select= function(i) {
             $scope.selectedIndex=i;
         };
+
+
+//code for the tag system
 
         //create categories array
         $scope.arrayOfWords = [];

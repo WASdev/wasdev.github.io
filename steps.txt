@@ -1,8 +1,0 @@
-learn github api
-learn github pages api
-learn how to get a json with info
-learn how to use javascript to display info from json and filter it
-
-then look at adding new design from the rest of the site to the page
-
-then look at updating the ux
