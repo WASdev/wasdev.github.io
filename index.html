@@ -444,7 +444,7 @@ background: none repeat scroll 0% 0% white !important;
                 All Repositories
             </div>
 
-            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix != 'wasdev'" ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
+            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix == 'sample' || prefix == 'tool' || prefix == 'ci' || prefix == 'lib' " ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
                 {{prefix}}
             </div>
         </div>
