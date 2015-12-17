@@ -29,11 +29,12 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
             $scope.selectedIndex=i;
         };
 
+        //code for filtering based on tags in the repository
+        /*
         //create categories array
         $scope.arrayOfWords = [];
         $scope.arrayOfCategories = [];
         $scope.arrayOfTags = [];
-
 
         angular.forEach($scope.repos, function(repo, index) {
             //split the descriptions into individual words
@@ -65,8 +66,25 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
             });
             //clear array of words
             $scope.arrayOfWords = [];
-        });
+        }); */
+        
+        //code for filtering based on prefix in the repository name
+        $scope.arrayOfPrefixes = [];
+        $scope.arrayOfPrefixesAndData = [];
+        
+        angular.forEach($scope.repos, function(repo, index) {
+            //get the prefix
+            var firstPeriodLocation = repo.name.indexOf(".");
+            var prefix = repo.name.substr(0, firstPeriodLocation);
+            
+            //push the prefix and data to an array
+            var array = {prefixFilter: prefix, repositoryData: repo};
+            $scope.arrayOfPrefixesAndData.push(array);
 
+            //if the prefix is unique, add to array of prefixes
+            if ($scope.arrayOfPrefixes.indexOf(prefix) == -1)
+              $scope.arrayOfPrefixes.push(prefix);
+        });
     });
 
 }]);
