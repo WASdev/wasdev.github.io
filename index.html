@@ -440,12 +440,12 @@ background: none repeat scroll 0% 0% white !important;
             </form>
 
 		<div id="githubCategories">
-            <div ng-click="click(null); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
+            <div ng-click="click(''); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
                 All Repositories
             </div>
 
-            <div ng-repeat="tag in arrayOfTags track by $index" ng-click="click(tag); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
-                {{tag}}
+            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix != 'wasdev'" ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
+                {{prefix}}
             </div>
         </div>
 
@@ -463,7 +463,7 @@ background: none repeat scroll 0% 0% white !important;
                         </div>
                     </div>
                 </div>
-                <div  ng-repeat="object in arrayOfCategories | filter: myFilter | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
+                <div  ng-repeat="object in arrayOfPrefixesAndData | filter: {prefixFilter: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
                     <div class="pn-columns">
                         <div class="pn-col-6-4">
                             <header class="pn-repo-header">
