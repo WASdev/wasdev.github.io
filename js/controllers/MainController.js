@@ -30,7 +30,7 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
         };
 
         //code for filtering based on tags in the repository
-        /*
+        
         //create categories array
         $scope.arrayOfWords = [];
         $scope.arrayOfCategories = [];
@@ -66,7 +66,7 @@ app.controller('MainController', ['$scope', 'github', function($scope, github) {
             });
             //clear array of words
             $scope.arrayOfWords = [];
-        }); */
+        });
         
         //code for filtering based on prefix in the repository name
         $scope.arrayOfPrefixes = [];
