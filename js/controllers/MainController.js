@@ -1,13 +1,24 @@
 /*Adam Fielding's angular controller for the github repo page */
 
-app.controller('MainController', ['$scope', 'github', function($scope, github) {
+app.controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
     github.success(function(data) {
         $scope.repos = data;
+        
+        //set the filter to the variable in the Url
+        var path = $location.path();
+        $scope.myFilter = path.slice(1);
 
+       //set the url path to the filter
         $scope.click = function(filter) {
-            $scope.myFilter = filter;
+            $location.path(filter);
         };
+        
+        // set the filter to the path of the url
+        $scope.$on('$locationChangeSuccess', function(event) {
+            var path = $location.path();
+            $scope.myFilter = path.slice(1);
+        });
 
         //sorting function and variables
         $scope.sortType = '-repositoryData.pushed_at'
