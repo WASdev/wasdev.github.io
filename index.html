@@ -440,11 +440,11 @@ background: none repeat scroll 0% 0% white !important;
             </form>
 
 		<div id="githubCategories">
-            <div ng-click="click(''); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
+            <div ng-click="click(''); select(-1)" ng-class="{githubFilterActive: myFilter == '', githubFilter: myFilter != ''}">
                 All Repositories
             </div>
 
-            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix == 'sample' || prefix == 'tool' || prefix == 'ci' || prefix == 'lib' " ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}">
+            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix == 'sample' || prefix == 'tool' || prefix == 'ci' || prefix == 'lib' " ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: prefix == myFilter, githubFilter: prefix != myFilter}">
                 {{prefix}}
             </div>
         </div>
@@ -452,38 +452,38 @@ background: none repeat scroll 0% 0% white !important;
 	<div class="mtxl">
 
         <!-- where the views are inserted -->
-            <div id="pn-repo-listing" class="pn-repo-listing" >
-                <div class="pn-repo-item" data-tag="all">
-                    <div class="pn-columns">
-                        <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
-                        <div class="pn-col-6-2">
-                            <a href="#" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
-                            <span ng-show="!reverseSort">&#x25BC;</span></a>
+        <div id="pn-repo-listing" class="pn-repo-listing" >
+            <div class="pn-repo-item" data-tag="all">
+                <div class="pn-columns">
+                    <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
+                    <div class="pn-col-6-2">
+                        <a href="#" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
+                        <span ng-show="!reverseSort">&#x25BC;</span></a>
 
-                        </div>
                     </div>
                 </div>
-                <div  ng-repeat="object in arrayOfPrefixesAndData | filter: {prefixFilter: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
-                    <div class="pn-columns">
-                        <div class="pn-col-6-4">
-                            <header class="pn-repo-header">
-                                <h3><a href="{{object.repositoryData.html_url}}"> {{object.repositoryData.name}} </a></h3>
-                            </header>
-                            <div class="pn-repo-content">
-                                <p>{{object.repositoryData.description}}</p>
-                            </div>
+            </div>
+            <div  ng-repeat="object in arrayOfPrefixesAndData | filter: {prefixFilter: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
+                <div class="pn-columns">
+                    <div class="pn-col-6-4">
+                        <header class="pn-repo-header">
+                            <h3><a href="{{object.repositoryData.html_url}}"> {{object.repositoryData.name}} </a></h3>
+                        </header>
+                        <div class="pn-repo-content">
+                            <p>{{object.repositoryData.description}}</p>
                         </div>
-                        <div class="pn-col-6-2">
+                    </div>
+                    <div class="pn-col-6-2">
 
-                            <div class="pn-repo-footer">
-                                <footer class="pn-post-meta pn-asset-meta">
-                                {{object.repositoryData.pushed_at | date : medium }}
-                                </footer>
-                            </div>
+                        <div class="pn-repo-footer">
+                            <footer class="pn-post-meta pn-asset-meta">
+                            {{object.repositoryData.pushed_at | date : medium }}
+                            </footer>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
 
         <div id="moreIBMRepos">
