@@ -1,0 +1,597 @@
+<html ng-app="app">
+<!--[if lt IE 7]>      <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html style="" prefix="og: http://ogp.me/ns#" class="pn-sticky-footer  js flexbox hashchange history rgba hsla multiplebgs backgroundsize borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients csstransforms csstransforms3d csstransitions generatedcontent localstorage cssremunit" lang="en-US"><!--<![endif]--><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="IBM.WTMSite" content="DWNEXT">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+Force IE8+ into Standards mode by default (now done with http header)
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+ -->
+
+<title>WASdev Open Source Community</title>
+
+<!-- <link rel="stylesheet" id="wp-fullcalendar-css" href="style/main.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-ui-css-css" href="style/jquery-ui.htm" type="text/css" media="all"> -->
+<!-- <link rel="stylesheet" id="jquery-ui-css-theme-css" href="style/theme.htm" type="text/css" media="all"> -->
+<link rel="stylesheet" id="pnext_common-css" href="style/common.css" type="text/css" media="all">
+<link rel="stylesheet" id="pnext-css" href="style/style_003.css" type="text/css" media="all">
+<!-- <link rel="stylesheet" id="pnext.utils-css" href="style/pnext-utils.css" type="text/css" media="all"> -->
+<link rel="stylesheet" id="pnext-child-css" href="style/style_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="pnext_custom-css" href="style/wasdev.css" type="text/css" media="screen">
+<link rel="stylesheet" id="pnext_github-css" href="style/github.css" type="text/css" media="all">
+<!-- <link rel="stylesheet" id="genericons-css" href="style/genericons.css" type="text/css" media="all"> -->
+<!-- <link rel="stylesheet" id="jetpack_css-css" href="style/jetpack.css" type="text/css" media="all"> -->
+<script type="text/javascript" src="js/wasdev/jquery_002.js"></script>
+<!-- <script type="text/javascript" src="js/wasdev/core.js"></script> -->
+<!-- <script type="text/javascript" src="js/wasdev/widget.js"></script> -->
+<!-- <script type="text/javascript" src="js/wasdev/position.js"></script>
+<script type="text/javascript" src="js/wasdev/mouse.js"></script>
+<script type="text/javascript" src="js/wasdev/sortable.js"></script>
+<script type="text/javascript" src="js/wasdev/datepicker.js"></script>
+<script type="text/javascript" src="js/wasdev/menu.js"></script>
+<script type="text/javascript" src="js/wasdev/autocomplete.js"></script>
+<script type="text/javascript" src="js/wasdev/resizable.js"></script>
+<script type="text/javascript" src="js/wasdev/draggable.js"></script>
+<script type="text/javascript" src="js/wasdev/dialog.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var EM = {"ajaxurl":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php","locationajaxurl":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php?action=locations_search","firstDay":"1","locale":"en","dateFormat":"dd\/mm\/yy","ui_css":"https:\/\/developer.ibm.com\/wasdev\/wp-content\/plugins\/events-manager\/includes\/css\/ui-lightness.css","show24hours":"1","is_ssl":"1","txt_search":"Search","txt_searching":"Searching...","txt_loading":"Loading...","event_reschedule_warning":"Are you sure you want to reschedule this recurring event? If you do this, you will lose all booking information and the old recurring events will be deleted.","event_detach_warning":"Are you sure you want to detach this event? By doing so, this event will be independent of the recurring set of events.","delete_recurrence_warning":"Are you sure you want to delete all recurrences of this event? All events will be moved to trash."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/wasdev/events-manager.js"></script>
+<script type="text/javascript" src="js/wasdev/selectmenu.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPFC = {"ajaxurl":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php","firstDay":"1","wpfc_theme":"1","wpfc_limit":"4","wpfc_limit_txt":"more ...","timeFormat":"h(:mm)t","defaultView":"month","weekends":"true","header":{"right":"month"},"wpfc_qtips":"1","wpfc_qtips_classes":"ui-tooltip-light","wpfc_qtips_my":"top center","wpfc_qtips_at":"bottom center","wpfc_locale":{"firstDay":"1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/wasdev/main.js"></script>
+<script type="text/javascript" src="js/wasdev/ida_production.js"></script>
+<script type="text/javascript" src="js/wasdev/modernizr-production.js"></script>
+<script type="text/javascript" src="js/wasdev/pnext_002.js"></script>
+<script type="text/javascript" src="js/wasdev/responsive.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developer.ibm.com/wasdev/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developer.ibm.com/wasdev/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.2.5">
+<link rel="shortlink" href="https://wp.me/P4IIth-5P">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css" id="syntaxhighlighteranchor"></style>
+
+<style id="custom-css-css">@charset "UTF-8";.pn-copy h2.aboutliberty{margin:0}.pn-copy h3.aboutliberty{margin:0}.aboutliberty .widget_links ul{list-style:outside none none;padding:0;margin:1em 0}</style>
+
+<link rel="pingback" href="https://developer.ibm.com/wasdev/xmlrpc.php">
+<link rel="shortcut icon" href="https://developer.ibm.com/wasdev/wp-content/themes/projectnext/css/favicon.ico">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script> <!--poss delete this??-->
+
+
+<!-- This is the CSE for a topical site. It must be loaded in head, before google search Form -->
+
+	<script>//<![CDATA[
+
+		(function() {
+
+			var cx = '006696266273115712924:ft7vdfhvshq';
+			var hq = 'nextwasdev';
+
+			var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+
+			gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+
+			'//www.google.com/cse/cse.js?cx=' + cx + ( hq ? '&hq=more:' + hq : '');
+
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+
+		})();//]]>
+
+	</script>
+<script type="text/javascript" src="js/wasdev/jsapi"></script><link rel="stylesheet" href="style/defaulten.css" type="text/css"><link rel="stylesheet" href="style/default.css" type="text/css"><script src="js/wasdev/defaulten.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input {
+border-color: #BCCDF0;
+}
+input.gsc-search-button {
+border-color: #666666;
+background-color: #CECECE;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-top-color: #FF9900;
+border-left-color: #E9E9E9;
+border-right-color: #E9E9E9;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #E9E9E9;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result.gsc-promotion:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #0000CC;
+}
+.gsc-cursor-page {
+color: #0000CC;
+}
+a.gsc-trailing-more-results:link {
+color: #0000CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #000000;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #FF9900;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #336699;
+background-color: #EEEEEE;
+}
+.gsc-completion-title {
+color: #0000CC;
+}
+.gsc-completion-snippet {
+color: #000000;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #FF0000;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #FF0000;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}
+.gsc-input input.gsc-input {
+background: none repeat scroll 0% 0% white !important;
+}</style></head>
+
+<body ng-controller="MainController" class="home page page-id-361 page-template-default" >
+
+
+    	<div role="region" aria-label="Skip link">
+     <a class="visuallyhidden focusable" href="#pnext-main">Skip to main content</a>
+    </div>
+    <div class="pn-dw-master cf" role="banner">
+
+    	<div class="fl">
+        <a href="http://www.ibm.com/developerworks/" class="pn-dw-fed-logo"><span class="pn-dw-ibm">IBM</span> <span class="pn-mast-text pn-dw-dWorks">developerWorks</span></a>
+        <span class="pn-mast-text">/</span>
+        <a class="pn-mast-text pn-dw-fed-logo" href="https://developer.ibm.com/centers/">Developer Centers</a>
+    	</div>
+
+
+    	<div class="fr">
+    	  <span id="pnext-dw-tab" class="pn-dw-tab"><a href="http://www.ibm.com/developerworks/" rel="external"><img scale="0" alt="dW" src="assets/dw-tab.png"></a></span>
+    	</div>
+
+    </div>
+
+    <style>
+    .links-top-menu a,
+    .links-top-menu a:visited,
+    .navbar-inner .nav-links > li > a {
+      color: #3c6fa9;
+    }
+
+    .links-top-menu a:hover,
+    .links-top-menu a:focus,
+    .navbar-inner .nav-links > li > a:hover,
+    .navbar-inner .nav-links > li > a:focus {
+      color: #3c6fa9;
+    }
+
+    .link-home a,
+    .link-home a:visited { color: #3c6fa9; }
+
+    .link-home a:hover,
+    .link-home a:focus {
+      color: #3c6fa9;
+    }
+
+
+    .pn-top-menu {
+        font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial, sans-serif;
+        font-weight: 200;
+        border-top-color: #ffffff;
+        background: #ffffff; /* Old browsers */
+        background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+        background: linear-gradient(to bottom, #ffffff 0%, #ffffff 100%); /* W3C */
+        border-bottom-color: #ffffff;
+    }
+
+    .pn-nav-search-input {
+        border-color: #3c6fa9;
+
+        background: #ffffff; /* Old browsers */
+        background: transparent -webkit-linear-gradient(top, #ffffff 0,#ffffff 35px, #eeeeee 150px, #ffffff 185px); /* Chrome10+,Safari5.1+ */
+        background: transparent linear-gradient(to bottom,  #ffffff 0,#ffffff 35px, #eeeeee 150px, #ffffff 185px); /* W3C */
+        background-position: left top;
+        background-size: 100% 185px;
+      }
+
+    .pn-nav-search-input[required] {
+      box-shadow: none;
+    }
+
+    .pn-nav-home,
+    .pn-top-menu .menu-item {
+      line-height: 2;
+      white-space: nowrap;
+    }
+
+    .pn-nav-home {
+    	display: block;
+    	font-size: 1em;
+    	text-transform: uppercase;
+    	letter-spacing: 1.5px;
+    	font-weight: bold;
+    	text-shadow: 0 1px #333333;
+    	margin-right: 2.75em;
+    	margin-left: 2.2em;
+    }
+
+    .pn-logo-image {
+    	margin: 0;
+    	padding: 0;
+    	display: block;
+    	max-width: none !important;
+    	height: auto !important;
+    }
+
+    .pn-top-menu .menu-item {
+      float:left; /* use float, not inlines, to avoid line-breaks between words */
+    	margin-right: 2em;
+    	margin-top: 3;}
+
+    .pn-search {
+    margin-top: 3;}
+
+    /*.pn-btn {
+      color: #fff !important;
+    }
+
+    .pn-btn,
+    .pn-btn-primary {
+      background-color: #5b2668;
+    }
+
+    .pn-btn:hover,
+    .pn-btn:focus,
+    .pn-btn-primary:hover,
+    .pn-btn-primary:focus {
+      background-color: #7c348d;
+    }
+
+    .pn-btn-secondary {
+      background-color: #26358f;
+    }
+
+    .pn-btn-secondary:hover,
+    .pn-btn-secondary:focus {
+      background-color: #3044b5;
+    }*/
+
+
+    .pn-btn-nav-menu {
+      vertical-align: middle;
+      padding-left: 1.428571429em;
+      padding-right: 1.428571429em;
+    }
+    </style>
+
+    <div id="pnext-top-menu" class="pn-top-menu links-top-menu" role="navigation" aria-label="Main navigation">
+      <div class="flag">
+        <span class="link-home flag-img">
+          <a rel="home" class="pn-nav-home" href="https://developer.ibm.com/wasdev"><img scale="0" class="pn-logo-image" src="assets/wasdev.png" alt="WASdev"></a>
+        </span>
+
+
+          <div class="pn-top-menu-container flag-bd flag-expand"><div id="button-menu"><a>Menu</a></div><ul id="menu-main" class="menu"><li id="menu-item-11996" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11996"><a title="About WebSphere Liberty" href="https://developer.ibm.com/wasdev/websphere-liberty/">About</a></li>
+    <li id="menu-item-12338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12338"><a href="https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/">Get started</a></li>
+    <li id="menu-item-8368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8368"><a title="Download Liberty, features, and samples" href="https://developer.ibm.com/wasdev/downloads/">Downloads</a></li>
+    <li id="menu-item-2816" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2816"><a title="Articles and videos for developers" href="https://developer.ibm.com/wasdev/docs/category/getting-started/">Docs</a></li>
+    <li id="menu-item-12458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12458"><a title="Open source code on Github" href="https://github.com/wasdev">Source Code</a></li>
+    <li id="menu-item-718" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-718"><a title="All the ways you can get help developing on Liberty" href="https://developer.ibm.com/wasdev/help/">Get help</a></li>
+    <li id="menu-item-2415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2415"><a title="News, events, and opinions on WAS Liberty" href="https://developer.ibm.com/wasdev/blog/">News &amp; Events</a></li>
+    </ul></div>
+
+        <div class="flag-bd">
+
+
+
+    	  <div class="pn-search">
+
+    		<form role="search" class="pn-search-form" method="get" id="searchbox_006696266273115712924:ft7vdfhvshq" action="https://developer.ibm.com/wasdev/search/">
+    		  <input value="more:nextwasdev" name="hq" type="hidden">
+    		  <label for="pnext-search-input" class="visuallyhidden">Search</label>
+    		  <input placeholder="Search" required="" aria-required="true" id="pnext-search-input" class="pn-search-input pn-nav-search-input fl" name="visual_q" size="70" type="search">
+    		  <input id="pnext-search-input-hidden" name="q" type="hidden">
+    		  <input class="pn-search-submit" src="assets/searchicon.png" alt="Go" onclick="(function() {
+    				  var search_input = $('#pnext-search-input');
+    				  var search_actual = $('#pnext-search-input-hidden');
+    				  search_actual.val(search_input.val()+' more:nextwasdev');
+    				  $('#searchbox_006696266273115712924:ft7vdfhvshq').submit();
+    				  return false;
+    			  })()" height="14" type="image" width="14">
+    		</form>
+
+    	  </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="pnext-main" class="mbxl" role="main">
+
+	<div class="pn-pcon">
+		<section id="post-715" class="post-715 page type-page status-publish hentry">
+			<header class="pn-page-header">
+				<h1 class="pn-page-title">GitHub Repositories</h1>
+			</header>
+
+            <form>
+			     <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
+            </form>
+
+		<div id="githubCategories">
+            <div ng-click="click('')" ng-class="{githubFilterActive: myFilter == '', githubFilter: myFilter != ''}">
+                All Repositories
+            </div>
+
+            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix == 'sample' || prefix == 'tool' || prefix == 'ci' || prefix == 'lib' " ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: prefix == myFilter, githubFilter: prefix != myFilter}">
+                {{prefix}}
+            </div>
+        </div>
+
+	<div class="mtxl">
+
+        <!-- where the views are inserted -->
+        <div id="pn-repo-listing" class="pn-repo-listing" >
+            <div class="pn-repo-item" data-tag="all">
+                <div class="pn-columns">
+                    <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
+                    <div class="pn-col-6-2">
+                        <a href="#" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
+                        <span ng-show="!reverseSort">&#x25BC;</span></a>
+
+                    </div>
+                </div>
+            </div>
+            <div  ng-repeat="object in arrayOfPrefixesAndData | filter: {prefixFilter: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
+                <div class="pn-columns">
+                    <div class="pn-col-6-4">
+                        <header class="pn-repo-header">
+                            <h3><a href="{{object.repositoryData.html_url}}"> {{object.repositoryData.name}} </a></h3>
+                        </header>
+                        <div class="pn-repo-content">
+                            <p>{{object.repositoryData.description}}</p>
+                        </div>
+                    </div>
+                    <div class="pn-col-6-2">
+
+                        <div class="pn-repo-footer">
+                            <footer class="pn-post-meta pn-asset-meta">
+                            {{object.repositoryData.pushed_at | date : medium }}
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="moreIBMRepos">
+		    Looking for more IBM GitHub repositories? Check out <a href="http://ibm.github.io/">http://ibm.github.io/</a>
+        </div>
+
+		</section>
+	</div>
+
+
+</div>  <!-- // centering class from header -->
+
+
+
+<div id="pnext-footer" class="pn-footer links-footer" role="navigation" aria-label="Page footer">
+
+	<div class="pn-pcon">
+
+		<div class="pn-columns">
+			<div class="pn-col-6-1">
+
+
+  <a class="pn-footer-social-link" href="https://twitter.com/WASdevnet"><i class="sprite twitter-footer"></i><span class="visuallyhidden">Follow us on Twitter</span></a>
+
+
+<a class="pn-footer-social-link" href="https://plus.google.com/u/0/b/103117918522497423170/103117918522497423170" rel="publisher">
+  <i class="gplus-footer"></i><span class="visuallyhidden">Google+ Page</span>
+</a>
+
+<a class="pn-footer-social-link" href="https://developer.ibm.com/wasdev/feed/">
+  <i class="sprite rss-footer"></i><span class="visuallyhidden">RSS Feed</span>
+</a>
+			</div>
+			<div class="pn-col-6-4">
+
+			  <div class="pn-footer-menu" role="contentinfo">
+
+          <ul id="menu-footer" class="pn-footer-menu pn-il pn-il--center"><li class="pn-footer-menu-item pn-il-item"><a href="https://developer.ibm.com/wasdev/contact/">Contact us</a></li><li class="pn-footer-menu-item pn-il-item"><a href="https://www.ibm.com/developerworks/secure/reportabuse?referingURL=https%3A%2F%2Fdeveloper.ibm.com%2Fwasdev">Report Abuse</a></li><li class="pn-footer-menu-item pn-il-item"><a href="https://developer.ibm.com/terms-of-use/">Terms of Use</a></li><li class="pn-footer-menu-item pn-il-item"><a href="https://developer.ibm.com/third-party-notice/">Third Party Notice</a></li><li class="pn-footer-menu-item pn-il-item"><a href="http://www.ibm.com/privacy/">IBM Privacy</a></li></ul>
+			  </div>
+
+			</div>
+
+			<div class="pn-col-6-1">
+
+			  <span class="fr">
+			  <a href="http://ibm.com/"><i class="sprite ibm-smlogo"></i><span class="visuallyhidden">IBM</span></a>
+			  </span>
+
+			</div>
+		</div>
+
+
+	</div>
+
+</div>
+
+	<div style="display:none">
+	<div class="grofile-hash-map-182c7b31d19731f0a5c2e73386ca1fde">
+	</div>
+	<div class="grofile-hash-map-bbff80e2c97fcc6be7579b5bb1c6d565">
+	</div>
+	<div class="grofile-hash-map-b70781819f41fc2b7f58a6bc8510b5b9">
+	</div>
+	<div class="grofile-hash-map-71fc77a0078f0752bb573ad309d4ce53">
+	</div>
+	<div class="grofile-hash-map-7586200b0de13170cc820be9422d246e">
+	</div>
+	</div>
+<script type="text/javascript" src="js/wasdev/jquery.js"></script>
+<script type="text/javascript" src="js/wasdev/rotating_tweet.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/wasdev/polls-js.js"></script>
+<script type="text/javascript" src="js/wasdev/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="js/wasdev/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/wasdev/wpgroho.js"></script>
+<script type="text/javascript" src="js/wasdev/util.js"></script>
+<script type="text/javascript" src="js/wasdev/google-analytics.js"></script>
+<script type="text/javascript" src="js/wasdev/google-analytics_002.js"></script>
+<script type="text/javascript" src="js/wasdev/pnext.js"></script>
+<script type="text/javascript" src="js/wasdev/download-overlay.js"></script>
+<script type="text/javascript" src="js/wasdev/comment-reply.js"></script>
+<script type="text/javascript" src="js/wasdev/e-201549.js" async="" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.5.3',blog:'69762727',post:'361',tz:'0',srv:'developer.ibm.com'} ]);
+	_stq.push([ 'clickTrackerInit', '69762727', '361' ]);
+</script>
+
+<div style="display: none;" class="pn-modal-overlay"></div><div style="display: none;" class="pn-modal"><div class="pn-modal-wrap"><div class="pn-modal-hd">Header Here</div><div class="pn-modal-bd"></div><div class="pn-modal-ft"></div><a href="#" class="pn-modal-close">x</a></div></div>
+
+</body>
+
+<!-- Modules -->
+<script src="js/app.js"></script>
+
+<!-- Controller -->
+<script src="js/controllers/MainController.js"></script>
+
+<!-- Services -->
+<script src="js/services/github.js"></script>
+
+</html>

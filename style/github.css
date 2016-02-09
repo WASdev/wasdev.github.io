@@ -1,0 +1,129 @@
+/*Adam Fielding's Custom CSS for the github repo page */
+
+.githubFilter {
+    display: inline-block;
+    color: #00649D;
+    border: 2px solid #00649D;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+    width: 200px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    background-color: #FFF;
+    border: 2px solid #00649D;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.githubFilter:hover {
+    cursor: pointer;
+    background-color: #00649d;
+    color:#fff;
+}
+
+.githubFilterActive {
+    cursor: pointer;
+    background-color: #00649d;
+    color:#fff;
+    display: inline-block;
+    border: 2px solid #00649D;
+    font-size: 11px;
+    font-weight: bold;
+    height: 15px;
+    width: 200px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    border: 2px solid #00649D;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#moreIBMRepos {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    text
+}
+
+#gitRepoFilter {
+    margin-bottom:15px;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: linear-gradient(#FFF 0px, #FFF 35px, #EEE 150px, #FFF 185px);
+    background-origin: padding-box;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    background-size: 100% 185px;
+    border-bottom-color: #3C6FA9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: #3C6FA9;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-color: #3C6FA9;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-top-color: #3C6FA9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-style: solid;
+    border-top-width: 2px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #999;
+    floatleftfont-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: 200;
+    height: 32px;
+    line-height: 14px;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    padding-right: 30px;
+    padding-top: 7px;
+    transition-delay: 0s;
+    transition-duration: 0.2s;
+    transition-property: #FFF;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+    width: 225px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+}
