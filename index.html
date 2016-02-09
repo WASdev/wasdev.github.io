@@ -440,12 +440,11 @@ background: none repeat scroll 0% 0% white !important;
             </form>
 
 		<div id="githubCategories">
-            <div ng-click="click('')" ng-class="{githubFilterActive: myFilter == '', githubFilter: myFilter != ''}">
+            <div ng-click="click(''); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
                 All Repositories
             </div>
 
-            <div ng-repeat="prefix in arrayOfPrefixes track by $index" ng-if="prefix == 'sample' || prefix == 'tool' || prefix == 'ci' || prefix == 'lib' " ng-click="click(prefix); select($index)" ng-class="{githubFilterActive: prefix == myFilter, githubFilter: prefix != myFilter}">
-                {{prefix}}
+            <div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration' || filter == 'libraries' || filter.lastIndexOf('#') == 0 " ng-click="click(filter); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}" ng-bind="filter">
             </div>
         </div>
 
@@ -463,21 +462,19 @@ background: none repeat scroll 0% 0% white !important;
                     </div>
                 </div>
             </div>
-            <div  ng-repeat="object in arrayOfPrefixesAndData | filter: {prefixFilter: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="object.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
+            <div  ng-repeat="arrayOfFiltersAndData in masterArrayOfFiltersAndData | filter: {tags: myFilter} | filter: searchRepos | orderBy: sortType:reverseSort" ng-if="arrayOfFiltersAndData.repositoryData.name != 'wasdev.github.io'" class="pn-repo-item" data-tag="all">
                 <div class="pn-columns">
                     <div class="pn-col-6-4">
                         <header class="pn-repo-header">
-                            <h3><a href="{{object.repositoryData.html_url}}"> {{object.repositoryData.name}} </a></h3>
+                            <h3><a ng-bind="arrayOfFiltersAndData.repositoryData.name" ng-href="{{arrayOfFiltersAndData.repositoryData.html_url}}"></a></h3>
                         </header>
                         <div class="pn-repo-content">
-                            <p>{{object.repositoryData.description}}</p>
+                            <p ng-bind="arrayOfFiltersAndData.repositoryData.description"></p>
                         </div>
                     </div>
                     <div class="pn-col-6-2">
-
                         <div class="pn-repo-footer">
-                            <footer class="pn-post-meta pn-asset-meta">
-                            {{object.repositoryData.pushed_at | date : medium }}
+                            <footer ng-bind="arrayOfFiltersAndData.repositoryData.pushed_at | date : medium" class="pn-post-meta pn-asset-meta">
                             </footer>
                         </div>
                     </div>

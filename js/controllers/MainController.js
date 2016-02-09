@@ -3,8 +3,8 @@
 app.controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
     github.success(function(data) {
-        $scope.repos = data;
-        
+        repos = data;
+
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
@@ -13,7 +13,7 @@ app.controller('MainController', ['$scope', 'github', '$location', function($sco
         $scope.click = function(filter) {
             $location.path(filter);
         };
-        
+
         // set the filter to the path of the url
         $scope.$on('$locationChangeSuccess', function(event) {
             var path = $location.path();
@@ -41,61 +41,82 @@ app.controller('MainController', ['$scope', 'github', '$location', function($sco
         };
 
         //code for filtering based on tags in the repository
-        
-        //create categories array
-        $scope.arrayOfWords = [];
-        $scope.arrayOfCategories = [];
-        $scope.arrayOfTags = [];
 
-        angular.forEach($scope.repos, function(repo, index) {
-            //split the descriptions into individual words
-            var x = repo.description.split(' ');
-            $scope.arrayOfWords.push(x);
-            angular.forEach($scope.arrayOfWords, function(wordArray, index) {
+        //array holding the unique filters generated from the tags and the prefixes
+        $scope.arrayOfFilters = [];
+        //arrays used to hold the filters until they are pushed into the data array by index
+        arrayOfPrefixes = [];
+        arrayOfTags = [];
+        //array holding the repo data and each repos filters
+        $scope.arrayOfFiltersAndData = [];
+        //array holding the arrayOfFiltersAndData
+        $scope.masterArrayOfFiltersAndData = [];
 
-                //create array of tags in the description
-                var descriptionTags = [];
-
-                angular.forEach(wordArray, function(word, index) {
-                    //check each word to see if it begins with a hash
-                    if (word.indexOf("#") > -1) {
-
-                        descriptionTags.push(word);
-
-                        //push the word to a plain tag array, for use in next code block - only if unique
-                        if ($scope.arrayOfTags.indexOf(word) == -1)
-                        $scope.arrayOfTags.push(word);
-                    }
-                });
-
-                //push the tag and the repo data to arrayOfCategories
-                var array = {tags: descriptionTags, repositoryData: repo};
-
-                //add to the Category Array
-                $scope.arrayOfCategories.push(array);
-
-            });
-            //clear array of words
-            $scope.arrayOfWords = [];
-        });
-        
-        //code for filtering based on prefix in the repository name
-        $scope.arrayOfPrefixes = [];
-        $scope.arrayOfPrefixesAndData = [];
-        
-        angular.forEach($scope.repos, function(repo, index) {
+        // code for filtering based on prefix in the repository name
+        angular.forEach(repos, function(repo, index) {
             //get the prefix
             var firstPeriodLocation = repo.name.indexOf(".");
             var prefix = repo.name.substr(0, firstPeriodLocation);
-            
-            //push the prefix and data to an array
-            var array = {prefixFilter: prefix, repositoryData: repo};
-            $scope.arrayOfPrefixesAndData.push(array);
-
+            //change the prefixes to more user readable names
+            switch (prefix) {
+                   case "sample":
+                       prefix = "samples";
+                       break;
+                   case "ci":
+                      prefix = "continuous integration";
+                       break;
+                   case "lib":
+                       prefix = "libraries";
+                       break;
+                   case "tool":
+                       prefix = "tools";
+                       break;
+               }
+            //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
+            arrayOfPrefixes.push(prefix);
             //if the prefix is unique, add to array of prefixes
-            if ($scope.arrayOfPrefixes.indexOf(prefix) == -1)
-              $scope.arrayOfPrefixes.push(prefix);
+            if ($scope.arrayOfFilters.indexOf(prefix) == -1)
+              $scope.arrayOfFilters.push(prefix);
         });
+
+        //code for filtering based on tags in the repository
+        angular.forEach(repos, function(repo, index) {
+            //split the descriptions into individual words
+            var arrayOfWords = repo.description.split(' ');
+            angular.forEach(arrayOfWords, function(word, wordIndex) {
+            //check each word to see if it begins with a hash
+                if (word.indexOf("#") > -1) {
+                    //push to array containing all the tags
+                    arrayOfTags[index] = word;
+
+                    //push the tag to the array of filters, only if unique
+                    if ($scope.arrayOfFilters.indexOf(word) == -1) {
+                        $scope.arrayOfFilters.push(word);
+                    }
+                }
+            });
+            arrayOfWords = [];
+        });
+
+        //code for creating the arrayOfFilteresAndData Object, used by the directives
+        angular.forEach(arrayOfPrefixes, function(prefix, index) {
+            var tags = [];
+            //add prefix to tags
+            tags.push(prefix);
+            //if tag is not null, add to tags
+            if (arrayOfTags[index] != null) {
+                tags.push(arrayOfTags[index])
+            }
+
+            arrayOfFilteresAndData = {tags: tags, repositoryData: repos[index]};
+
+            //add to master array
+            $scope.masterArrayOfFiltersAndData.push(arrayOfFilteresAndData);
+        });
+
+        console.log($scope.masterArrayOfFiltersAndData);
+
     });
+
 
 }]);
