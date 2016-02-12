@@ -1,5 +1,21 @@
 /*Adam Fielding's Custom CSS for the github repo page */
 
+html, body {
+	height: 100%;
+}
+body {
+        overflow-y: scroll;
+}
+.container {
+	display: table;
+	height: 100%;
+    width: 100%;
+}
+.footer {
+	display: table-row;
+	height: 1px;
+}
+
 .githubFilter {
     display: inline-block;
     color: #00649D;
