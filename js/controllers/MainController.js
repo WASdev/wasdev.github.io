@@ -1,9 +1,10 @@
 /*Adam Fielding's angular controller for the github repo page */
 
-app.controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
+angular.module('app')
+    .controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
-    github.success(function(data) {
-        repos = data;
+        repos = [];
+        pageNumber = 1;
 
         //set the filter to the variable in the Url
         var path = $location.path();
@@ -18,6 +19,7 @@ app.controller('MainController', ['$scope', 'github', '$location', function($sco
         $scope.$on('$locationChangeSuccess', function(event) {
             var path = $location.path();
             $scope.myFilter = path.slice(1);
+            console.log($scope.myFilter);
         });
 
         //sorting function and variables
@@ -32,14 +34,6 @@ app.controller('MainController', ['$scope', 'github', '$location', function($sco
             $scope.reverseSort = !$scope.reverseSort;
         }
 
-
-        //style function
-        $scope.selectedIndex = -1;
-
-        $scope.select= function(i) {
-            $scope.selectedIndex=i;
-        };
-
         //code for filtering based on tags in the repository
 
         //array holding the unique filters generated from the tags and the prefixes
@@ -47,76 +41,99 @@ app.controller('MainController', ['$scope', 'github', '$location', function($sco
         //arrays used to hold the filters until they are pushed into the data array by index
         arrayOfPrefixes = [];
         arrayOfTags = [];
+
         //array holding the repo data and each repos filters
         $scope.arrayOfFiltersAndData = [];
         //array holding the arrayOfFiltersAndData
         $scope.masterArrayOfFiltersAndData = [];
 
         // code for filtering based on prefix in the repository name
-        angular.forEach(repos, function(repo, index) {
-            //get the prefix
-            var firstPeriodLocation = repo.name.indexOf(".");
-            var prefix = repo.name.substr(0, firstPeriodLocation);
-            //change the prefixes to more user readable names
-            switch (prefix) {
-                   case "sample":
-                       prefix = "samples";
-                       break;
-                   case "ci":
-                      prefix = "continuous integration";
-                       break;
-                   case "lib":
-                       prefix = "libraries";
-                       break;
-                   case "tool":
-                       prefix = "tools";
-                       break;
-               }
+        generateFilters = function() {
+            angular.forEach(repos, function(repo, index) {
+                //get the prefix
+                var firstPeriodLocation = repo.name.indexOf(".");
+                var prefix = repo.name.substr(0, firstPeriodLocation);
+                //change the prefixes to more user readable names
+                switch (prefix) {
+                    case "sample":
+                        prefix = "samples";
+                        break;
+                    case "ci":
+                        prefix = "continuous integration";
+                        break;
+                    case "lib":
+                        prefix = "libraries";
+                        break;
+                    case "tool":
+                        prefix = "tools";
+                        break;
+                    }
+
             //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
             arrayOfPrefixes.push(prefix);
             //if the prefix is unique, add to array of prefixes
             if ($scope.arrayOfFilters.indexOf(prefix) == -1)
-              $scope.arrayOfFilters.push(prefix);
-        });
+                $scope.arrayOfFilters.push(prefix);
+            });
+        }
 
         //code for filtering based on tags in the repository
-        angular.forEach(repos, function(repo, index) {
-            //split the descriptions into individual words
-            var arrayOfWords = repo.description.split(' ');
-            angular.forEach(arrayOfWords, function(word, wordIndex) {
-            //check each word to see if it begins with a hash
-                if (word.indexOf("#") > -1) {
-                    //push to array containing all the tags
-                    arrayOfTags[index] = word;
+        generateTags = function() {
+            angular.forEach(repos, function(repo, index) {
+                //split the descriptions into individual words
+                var arrayOfWords = repo.description.split(' ');
+                angular.forEach(arrayOfWords, function(word, wordIndex) {
+                    //check each word to see if it begins with a hash
+                    if (word.indexOf("#") > -1) {
+                        //push to array containing all the tags
+                        arrayOfTags[index] = word;
 
-                    //push the tag to the array of filters, only if unique
-                    if ($scope.arrayOfFilters.indexOf(word) == -1) {
-                        $scope.arrayOfFilters.push(word);
+                        //push the tag to the array of filters, only if unique
+                        if ($scope.arrayOfFilters.indexOf(word) == -1) {
+                            $scope.arrayOfFilters.push(word);
+                        }
                     }
-                }
+                });
+                arrayOfWords = [];
             });
-            arrayOfWords = [];
-        });
+        }
+
 
         //code for creating the arrayOfFilteresAndData Object, used by the directives
-        angular.forEach(arrayOfPrefixes, function(prefix, index) {
-            var tags = [];
-            //add prefix to tags
-            tags.push(prefix);
-            //if tag is not null, add to tags
-            if (arrayOfTags[index] != null) {
-                tags.push(arrayOfTags[index])
-            }
+        pushToArray = function() {
+            angular.forEach(arrayOfPrefixes, function(prefix, index) {
+                var tags = [];
+                //add prefix to tags
+                tags.push(prefix);
+                //if tag is not null, add to tags
+                if (arrayOfTags[index] != null) {
+                    tags.push(arrayOfTags[index])
+                }
 
-            arrayOfFilteresAndData = {tags: tags, repositoryData: repos[index]};
+                arrayOfFilteresAndData = {tags: tags, repositoryData: repos[index]};
 
-            //add to master array
-            $scope.masterArrayOfFiltersAndData.push(arrayOfFilteresAndData);
-        });
+                //add to master array
+                $scope.masterArrayOfFiltersAndData.push(arrayOfFilteresAndData);
+            });
+        }
 
-        console.log($scope.masterArrayOfFiltersAndData);
+        //getting the data
+        getAllGitHubData = function() {
+            url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
+            github.getGitHubData(url, function(response) {
+                repos = repos.concat(response.data);
+                if (response.headers('link').indexOf("next") >= 0) {
+                    pageNumber = pageNumber + 1;
+                    getAllGitHubData();
+                }
+                else {
+                    generateFilters();
+                    generateTags();
+                    pushToArray();
+                }
+            });
+        }
 
-    });
-
+        getAllGitHubData();
 
 }]);

@@ -440,11 +440,8 @@ background: none repeat scroll 0% 0% white !important;
             </form>
 
 		<div id="githubCategories">
-            <div ng-click="click(''); select(-1)" ng-class="{githubFilterActive: -1 == selectedIndex, githubFilter: -1 != selectedIndex}">
-                All Repositories
-            </div>
-
-            <div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration' || filter == 'libraries' || filter.lastIndexOf('#') == 0 " ng-click="click(filter); select($index)" ng-class="{githubFilterActive: $index==selectedIndex, githubFilter: $index != selectedIndex}" ng-bind="filter">
+            <div ng-click="click('')" ng-class="{githubFilterActive: myFilter == '', githubFilter: myFilter != ''}">All Repositories</div>
+            <div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration' || filter == 'libraries' || filter.lastIndexOf('#') == 0 " ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter, githubFilter: myFilter!=filter}" ng-bind="filter">
             </div>
         </div>
 
@@ -456,7 +453,7 @@ background: none repeat scroll 0% 0% white !important;
                 <div class="pn-columns">
                     <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
                     <div class="pn-col-6-2">
-                        <a href="#" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
+                        <a id="sort" role="button" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
                         <span ng-show="!reverseSort">&#x25BC;</span></a>
 
                     </div>
