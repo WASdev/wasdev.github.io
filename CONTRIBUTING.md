@@ -2,7 +2,7 @@
 
 We welcome contributions but request that you follow these guidelines.
 
-## Bugs
+## Reporting a bug
 
 Please raise any bug reports on the project's issue tracker.
 Be sure to search the list to see if your issue has already been raised.
@@ -17,7 +17,7 @@ Please raise any new feature requests on the project's issue tracker.
 
 ### Changes to existing code
 
-If you want to raise a pull request with a new feature, or a refactoring of existing code, make sure to open an issue in the project's issue tracker first before engaging in serious development work. This will start a discussion and help in accepting the pull request.
+If you want to raise a pull request with a new feature, a bug fix, or a refactoring of existing code, make sure to open an issue in the project's issue tracker first before engaging in serious development work. This will start a discussion and help in accepting the pull request.
 
 ### Coding standards
 
