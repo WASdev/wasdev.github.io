@@ -127,7 +127,7 @@ angular.module('app')
                     pageNumber = pageNumber + 1;
                     getAllGitHubData(); //recursive but also goes through url/file checks which is unnecessary
                 }
-                else {
+               else {
                     generateFilters();
                     generateTags();
                     pushToArray();
