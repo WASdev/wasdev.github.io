@@ -149,5 +149,4 @@ angular.module('app')
         }
         //var checked = 0;
         getAllGitHubData();
-
 }]);
