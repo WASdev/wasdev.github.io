@@ -123,7 +123,7 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             file = "test.json";
-            alert("12");
+            alert("22");
             // if url!=text file then read from the text file instead
             //github.get?
           //}
