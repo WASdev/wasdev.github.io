@@ -129,7 +129,7 @@ angular.module('app')
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 ////////////
-                alert(response.data);
+                alert(response);
                 ////////////
                 if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
