@@ -125,7 +125,7 @@ angular.module('app')
             file = "test.json";
             reader = new FileReader():
             reader.onload = function(){
-            data = reader.result;
+            var data = reader.result;
             }
             alert("22");
             alert(data);
