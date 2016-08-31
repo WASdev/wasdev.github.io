@@ -1,5 +1,4 @@
 /*Adam Fielding's angular controller for the github repo page */
-
 angular.module('app')
     .controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
@@ -53,6 +52,10 @@ angular.module('app')
                 //get the prefix
                 var firstPeriodLocation = repo.name.indexOf(".");
                 var prefix = repo.name.substr(0, firstPeriodLocation);
+
+              //  alert("TEST");
+
+
                 //change the prefixes to more user readable names
                 switch (prefix) {
                     case "sample":
@@ -81,7 +84,9 @@ angular.module('app')
         generateTags = function() {
             angular.forEach(repos, function(repo, index) {
                 //split the descriptions into individual words
-                var arrayOfWords = repo.description.split(' ');
+                if (repo.description!==null){
+                var arrayOfWords = repo.description.split(' ');}
+
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
                     if (word.indexOf("#") > -1) {
@@ -93,6 +98,7 @@ angular.module('app')
                             $scope.arrayOfFilters.push(word);
                         }
                     }
+                //  }
                 });
                 arrayOfWords = [];
             });
@@ -121,11 +127,11 @@ angular.module('app')
         getAllGitHubData = function() {
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
 
-            github.getGitHubData(url, function(response){
+            github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
-                    getAllGitHubData(); //recursive but also goes through url/file checks which is unnecessary
+                    getAllGitHubData();
                 }
                else {
                     generateFilters();
