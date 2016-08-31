@@ -151,7 +151,7 @@ angular.module('app')
                     repos=repos2;
                   }
 
-
+alert(repos);
 
 
 
