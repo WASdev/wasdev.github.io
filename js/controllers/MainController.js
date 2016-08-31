@@ -135,11 +135,13 @@ angular.module('app')
 
                 github.getGitHubData(url2, function(response) {
                   repos2 = repos.concat(response.data);}
+                )
+
+
                   if (repos!=repos2)
                   {
                     repos=repos2;
                   }
-                )
 
 
 
