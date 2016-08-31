@@ -125,7 +125,7 @@ angular.module('app')
 
         //getting the data
         getAllGitHubData = function() {
-            if (bool=0){
+            if (bool==0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json" + pageNumber;
           }
