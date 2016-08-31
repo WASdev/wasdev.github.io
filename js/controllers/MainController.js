@@ -135,7 +135,8 @@ angular.module('app')
 
                 if (response.headers('link').indexOf("next") >= 0) { //if more pages get data for next
                     pageNumber = pageNumber + 1;
-                    getAllGitHubData(); //is the recursion messing this up?
+                    //getAllGitHubData(); //is the recursion messing this up?
+                    getUrl1Data();
                 }}
               )
             }
