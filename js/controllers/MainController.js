@@ -129,7 +129,10 @@ angular.module('app')
             url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
 
             github.getGitHubData(url, function(response) { //get data
-                repos = repos.concat(response.data);} //add to repos
+                repos = repos.concat(response.data);}
+              ) //add to repos
+
+
                 github.getGitHubData(url2, function(response) {
                   repos2 = repos.concat(response.data);}
                   if (repos!=repos2)
@@ -152,9 +155,9 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                 }
-            });
+            };
         }
 
         getAllGitHubData();
 
-}]);
+}];
