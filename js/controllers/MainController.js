@@ -128,6 +128,7 @@ angular.module('app')
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             //window.location.href = "file:///C:/Users/IBM_ADMIN/Documents/GitHub/Task1/billyd73.github.io/test.json
             var data;
+            alert("asopdf");
             $.getJSON("file:///C:/Users/IBM_ADMIN/Documents/GitHub/Task1/billyd73.github.io/test.json", function(result(data));
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
