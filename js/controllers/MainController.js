@@ -126,7 +126,9 @@ angular.module('app')
         //getting the data
         getAllGitHubData = function() {
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
-
+            $.getJSON('https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json', function(data) {
+    //data is the JSON string
+});
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
