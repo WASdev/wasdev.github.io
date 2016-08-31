@@ -128,7 +128,7 @@ angular.module('app')
             ph.onreadystatechange = function(){
               if (ph.readystate === 4)
               {
-                var text = ph.responseText;
+                //var text = ph.responseText;
               }
             }
             //reader = new FileReader();
