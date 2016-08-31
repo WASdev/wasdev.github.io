@@ -3,8 +3,8 @@ angular.module('app')
     .controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
         repos = [];
-        repos2 = [];
         pageNumber = 1;
+        repoLocation = "https://api.github.com/orgs/WASdev/repos";
 
         //set the filter to the variable in the Url
         var path = $location.path();
@@ -126,39 +126,22 @@ angular.module('app')
 
         //getting the data
         getAllGitHubData = function() {
+            url = repoLocation + "?per_page=90&page=" + pageNumber;
 
-            url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
-
-            getUrl1Data = function() {
-              url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
-            github.getGitHubData(url, function(response) { //get data
-                repos = repos.concat(response.data); //add to repos
-
-                if (response.headers('link').indexOf("next") >= 0) { //if more pages get data for next
+            github.getGitHubData(url, function(response) {
+                repos = repos.concat(response.data);
+                if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
-                    //not working due to url not updating properly
-                    //getAllGitHubData(); //is the recursion messing this up?
-                    getUrl1Data();
-                }}
-              )
-            }
-
-            getUrl1Data();
-
-                github.getGitHubData(url2, function(response) {
-                  repos2 = repos2.concat(response.data);}
-                )
-            };
+                    getAllGitHubData();
+                }
+               else {
+                    generateFilters();
+                    generateTags();
+                    pushToArray();
+                }
+            });
+        }
 
         getAllGitHubData();
-        if (repos!=repos2)
-        {
-          repos=repos2;
-        }
-        { //finish
-             generateFilters();
-             generateTags();
-             pushToArray();
-         }
 
 }]);
