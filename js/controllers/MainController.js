@@ -130,44 +130,34 @@ angular.module('app')
             url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
 
             github.getGitHubData(url, function(response) {{ //get data
-                repos = repos.concat(response.data);}
+                repos = repos.concat(response.data);} //add to repos
 
-                if (response.headers('link').indexOf("next") >= 0) { //if more pages NOT DEFINED?
+                if (response.headers('link').indexOf("next") >= 0) { //if more pages get data for next
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
               }
               )
-             //add to repos
+
 
 
                 github.getGitHubData(url2, function(response) {
                   repos2 = repos2.concat(response.data);}
                 )
 
-
-                  if (repos!=repos2)
-                  {
-                    repos=repos2;
-                  }
-
-
-
-
-
-
-
-
-               else { //finish
-                    alert(repos);
-                    
-                    generateFilters();
-                    generateTags();
-                    pushToArray();
-                }
             };
-            //test
 
         getAllGitHubData();
+        if (repos!=repos2)
+        {
+          repos=repos2;
+        }
+        { //finish
+             alert(repos);
+
+             generateFilters();
+             generateTags();
+             pushToArray();
+         }
 
 }]);
