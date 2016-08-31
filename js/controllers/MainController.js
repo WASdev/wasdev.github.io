@@ -131,6 +131,7 @@ angular.module('app')
             };
             xmlhttp.open("GET","test.json",true);
             xmlhttp.send();
+            alert(txt);
             //checked = 1
             github.getGitHubData(url, function(response){
                 repos = repos.concat(response.data);
