@@ -126,10 +126,10 @@ angular.module('app')
         //getting the data
         getAllGitHubData = function() {
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
-            //window.location.href = "file:///C:/Users/IBM_ADMIN/Documents/GitHub/Task1/billyd73.github.io/test.json
-            var data;
-            alert("asopdf");
-            $.getJSON("file:///C:/Users/IBM_ADMIN/Documents/GitHub/Task1/billyd73.github.io/test.json", function(result(data)));
+            urlTest = "https://github.com/BillyD73/billyd73.github.io/blob/master/test.json" + pageNumber;
+            $.getJSON('https://github.com/BillyD73/billyd73.github.io/blob/master/test.json', function(data) {
+            //data is the JSON string
+            });
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
