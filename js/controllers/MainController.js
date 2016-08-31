@@ -123,14 +123,6 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             //file = "test.json";
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function(){
-              if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-                txt = xmlhttp.responseText;
-              }
-            };
-            xmlhttp.open("GET","test.json",true);
-            xmlhttp.send();
             //checked = 1
             github.getGitHubData(url, function(response){
                 repos = repos.concat(response.data);
