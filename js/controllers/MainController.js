@@ -123,7 +123,12 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             file = "test.json";
+            reader = new FileReader():
+            reader.onload = function(){
+            data = reader.result;
+            }
             alert("22");
+            alert(data);
             // if url!=text file then read from the text file instead
             //github.get?
           //}
@@ -135,6 +140,8 @@ angular.module('app')
                     getAllGitHubData(); //recursive but also goes through url/file checks which is unnecessary
                 }
                 else {
+                  /////////////////////////////////
+
                     generateFilters();
                     generateTags();
                     pushToArray();
