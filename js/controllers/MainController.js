@@ -130,8 +130,19 @@ angular.module('app')
 
             github.getGitHubData(url, function(response) { //get data
                 repos = repos.concat(response.data);} //add to repos
-                github.getGitHubData(url2, function(response) { //get data
-                    repos2 = repos.concat(response.data);} //add to repos
+                github.getGitHubData(url2, function(response) {
+                  repos2 = repos.concat(response.data);}
+                  if (repos!=repos2)
+                  {
+                    repos=repos2;
+                  }
+                )
+
+
+
+
+
+
                 if (response.headers('link').indexOf("next") >= 0) { //if more pages
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
