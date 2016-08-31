@@ -123,7 +123,7 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             file = "test.json";
-            reader = new FileReader():
+            reader = new FileReader();
             reader.onload = function(){
             var data = reader.result;
             }
