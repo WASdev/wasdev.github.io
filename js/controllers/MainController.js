@@ -127,9 +127,9 @@ angular.module('app')
         getAllGitHubData = function() {
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             urlTest = "https://github.com/BillyD73/billyd73.github.io/blob/master/test.json" + pageNumber;
-            $.getJSON('https://github.com/BillyD73/billyd73.github.io/blob/master/test.json', function(data) {
+          /*  $.getJSON('https://github.com/BillyD73/billyd73.github.io/blob/master/test.json', function(data) {
             //data is the JSON string
-            });
+          }); */
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
