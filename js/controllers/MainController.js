@@ -122,6 +122,7 @@ angular.module('app')
 
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
+            file = "test.json";
             // if url!=text file then read from the text file instead
             //github.get?
           //}
@@ -129,7 +130,7 @@ angular.module('app')
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 ////////////
-                alert(reponse);
+                alert("");
                 ////////////
                 if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
