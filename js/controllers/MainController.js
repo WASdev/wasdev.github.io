@@ -151,7 +151,7 @@ angular.module('app')
                     repos=repos2;
                   }
 
-alert(repos);
+
 
 
 
@@ -159,6 +159,8 @@ alert(repos);
 
 
                else { //finish
+                    alert(repos);
+                    
                     generateFilters();
                     generateTags();
                     pushToArray();
