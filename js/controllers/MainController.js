@@ -129,13 +129,13 @@ angular.module('app')
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
 
-            github.getGitHubData(url, function(response) { //get data
+            github.getGitHubData(url, function(response) {{ //get data
                 repos = repos.concat(response.data);} //add to repos
 
                 if (response.headers('link').indexOf("next") >= 0) { //if more pages get data for next
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
-                }
+                }}
               )
 
                 github.getGitHubData(url2, function(response) {
