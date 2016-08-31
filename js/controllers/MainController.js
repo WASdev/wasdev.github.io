@@ -129,8 +129,6 @@ angular.module('app')
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             url2 = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
 
-            getUrl1Data();
-
             getUrl1Data = function() {
             github.getGitHubData(url, function(response) { //get data
                 repos = repos.concat(response.data); //add to repos
@@ -142,6 +140,8 @@ angular.module('app')
                 }}
               )
             }
+
+            getUrl1Data();
 
                 github.getGitHubData(url2, function(response) {
                   repos2 = repos2.concat(response.data);}
