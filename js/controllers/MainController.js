@@ -163,4 +163,4 @@ angular.module('app')
 
         getAllGitHubData();
 
-}];
+})];
