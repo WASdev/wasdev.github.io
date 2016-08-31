@@ -1,4 +1,5 @@
 /*Adam Fielding's angular controller for the github repo page */
+
 angular.module('app')
     .controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
@@ -52,10 +53,6 @@ angular.module('app')
                 //get the prefix
                 var firstPeriodLocation = repo.name.indexOf(".");
                 var prefix = repo.name.substr(0, firstPeriodLocation);
-
-              //  alert("TEST");
-
-
                 //change the prefixes to more user readable names
                 switch (prefix) {
                     case "sample":
@@ -84,9 +81,7 @@ angular.module('app')
         generateTags = function() {
             angular.forEach(repos, function(repo, index) {
                 //split the descriptions into individual words
-                if (repo.description!==null){
-                var arrayOfWords = repo.description.split(' ');}
-
+                var arrayOfWords = repo.description.split(' ');
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
                     if (word.indexOf("#") > -1) {
@@ -98,7 +93,6 @@ angular.module('app')
                             $scope.arrayOfFilters.push(word);
                         }
                     }
-                //  }
                 });
                 arrayOfWords = [];
             });
@@ -125,23 +119,42 @@ angular.module('app')
 
         //getting the data
         getAllGitHubData = function() {
+
+            //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
-          //alert("Hello my name is Aron the alert message");
-          //if (repo.description!==null) {alert(repo.description);alert("repo.description");}
-            github.getGitHubData(url, function(response) {
+            //file = "test.json";
+            //ph = new XMLHttpRequest();
+            //ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
+            //ph.onreadystatechange = function(){
+              //if (ph.readystate === 4)
+              //{
+              //  var text = ph.responseText;
+            //  }
+          //  }
+            //reader = new FileReader();
+            //reader.onload = function(){
+            //data = reader.result; //currently null
+            //}
+            // if url!=text file then read from the text file instead
+            //github.get?
+          //}
+            //checked = 1
+            github.getGitHubData(url, function(response){
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
-                    getAllGitHubData();
+                    getAllGitHubData(); //recursive but also goes through url/file checks which is unnecessary
                 }
-               else {
+                else {
+                  /////////////////////////////////
+
                     generateFilters();
                     generateTags();
                     pushToArray();
                 }
             });
         }
-
+        //var checked = 0;
         getAllGitHubData();
 
 }]);
