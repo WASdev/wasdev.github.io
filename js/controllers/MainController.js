@@ -123,21 +123,14 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             //file = "test.json";
-            ph = new XMLHttpRequest();
-            //ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
-            //ph.onreadystatechange = function(){
-              //if (ph.readystate === 4)
-            //  {
-                //var text = ph.responseText;
-            //  }
-          //  }
-            //reader = new FileReader();
-            //reader.onload = function(){
-            //data = reader.result; //currently null
-            //}
-            // if url!=text file then read from the text file instead
-            //github.get?
-          //}
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+              if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+                txt = xmlhttp.responseText;
+              }
+            };
+            xmlhttp.open("GET","test.json",true);
+            xmlhttp.send();
             //checked = 1
             github.getGitHubData(url, function(response){
                 repos = repos.concat(response.data);
