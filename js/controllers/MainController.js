@@ -127,7 +127,7 @@ angular.module('app')
             reader.onload = function(){
             data = reader.result;
             }
-            alert(data);
+            alert(reader.result);
             // if url!=text file then read from the text file instead
             //github.get?
           //}
