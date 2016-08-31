@@ -119,11 +119,8 @@ angular.module('app')
 
         //getting the data
         getAllGitHubData = function() {
-
-            //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
-            //file = "test.json";
-            //checked = 1
+
             github.getGitHubData(url, function(response){
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
@@ -131,15 +128,13 @@ angular.module('app')
                     getAllGitHubData(); //recursive but also goes through url/file checks which is unnecessary
                 }
                 else {
-                  /////////////////////////////////
-
                     generateFilters();
                     generateTags();
                     pushToArray();
                 }
             });
         }
-        //var checked = 0;
+
         getAllGitHubData();
 
 }]);
