@@ -125,10 +125,9 @@ angular.module('app')
             file = "test.json";
             reader = new FileReader();
             reader.onload = function(){
-            var data = reader.result;
+            data = reader.result;
             }
             alert("22");
-            alert(data);
             // if url!=text file then read from the text file instead
             //github.get?
           //}
