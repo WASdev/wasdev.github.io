@@ -131,9 +131,9 @@ angular.module('app')
                 var text = ph.responseText;
               }
             }
-            reader = new FileReader();
-            reader.onload = function(){
-            data = reader.result; //currently null
+            //reader = new FileReader();
+            //reader.onload = function(){
+            //data = reader.result; //currently null
             }
             alert(text);
             // if url!=text file then read from the text file instead
