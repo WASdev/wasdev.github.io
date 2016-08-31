@@ -123,19 +123,19 @@ angular.module('app')
             //if (checked=0){
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             file = "test.json";
-            ph = new XMLHttpRequest();
+            //ph = new XMLHttpRequest();
             //ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
-            ph.onreadystatechange = function(){
-              if (ph.readystate === 4)
-              {
-                var text = ph.responseText;
-              }
-            }
+            //ph.onreadystatechange = function(){
+              //if (ph.readystate === 4)
+              //{
+              //  var text = ph.responseText;
+            //  }
+          //  }
             //reader = new FileReader();
             //reader.onload = function(){
             //data = reader.result; //currently null
             }
-            alert(text);
+            alert("2");
             // if url!=text file then read from the text file instead
             //github.get?
           //}
