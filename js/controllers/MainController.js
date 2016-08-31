@@ -131,11 +131,16 @@ angular.module('app')
 
             github.getGitHubData(url, function(response) { //get data
                 repos = repos.concat(response.data);}
+
+                if (response.headers('link').indexOf("next") >= 0) { //if more pages NOT DEFINED?
+                    pageNumber = pageNumber + 1;
+                    getAllGitHubData();
+                }
               ) //add to repos
 
 
-                github.getGitHubData(url2, function(response2) {
-                  repos2 = repos2.concat(response2.data);}
+                github.getGitHubData(url2, function(response) {
+                  repos2 = repos2.concat(response.data);}
                 )
 
 
@@ -150,10 +155,7 @@ angular.module('app')
 
 
 
-                if (response.headers('link').indexOf("next") >= 0) { //if more pages
-                    pageNumber = pageNumber + 1;
-                    getAllGitHubData();
-                }
+
                else { //finish
                     generateFilters();
                     generateTags();
