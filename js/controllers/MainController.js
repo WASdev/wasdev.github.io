@@ -128,7 +128,7 @@ angular.module('app')
             //github.get?
           //}
             //checked = 1
-            github.getGitHubData(url, function(response)
+            github.getGitHubData(url, function(response);
              {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0) {
