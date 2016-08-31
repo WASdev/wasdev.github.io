@@ -3,6 +3,7 @@ angular.module('app')
     .controller('MainController', ['$scope', 'github', '$location', function($scope, github, $location) {
 
         repos = [];
+        repos2 = [];
         pageNumber = 1;
 
         //set the filter to the variable in the Url
