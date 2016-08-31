@@ -125,12 +125,12 @@ angular.module('app')
             //file = "test.json";
             ph = new XMLHttpRequest();
             ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
-            //ph.onreadystatechange = function(){
-              //if (ph.readystate === 4)
-              //{
-              //  var text = ph.responseText;
-            //  }
-          //  }
+            ph.onreadystatechange = function(){
+              if (ph.readystate === 4)
+              {
+                var text = ph.responseText;
+              }
+            }
             //reader = new FileReader();
             //reader.onload = function(){
             //data = reader.result; //currently null
