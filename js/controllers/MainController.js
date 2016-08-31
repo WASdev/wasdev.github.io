@@ -124,7 +124,7 @@ angular.module('app')
             url = "https://api.github.com/orgs/WASdev/repos?per_page=90&page=" + pageNumber;
             file = "test.json";
             ph = new XMLHttpRequest();
-            ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
+            //ph.open("GET", "C:/users/IBM_ADMIN/My Documents/GitHub/Task1/billyd73.github.io/test.json", true);
             ph.onreadystatechange = function(){
               if (ph.readystate === 4)
               {
