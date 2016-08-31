@@ -134,8 +134,8 @@ angular.module('app')
               ) //add to repos
 
 
-                github.getGitHubData(url2, function(response) {
-                  repos2 = repos.concat(response.data);}
+                github.getGitHubData(url2, function(response2) {
+                  repos2 = repos2.concat(response2.data);}
                 )
 
 
