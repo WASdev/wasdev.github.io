@@ -5,6 +5,7 @@ angular.module('app')
         repos = [];
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
+        //working off this url, query parameter check with location.search
 
         //set the filter to the variable in the Url
         var path = $location.path();
@@ -127,6 +128,8 @@ angular.module('app')
         //getting the data
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=90&page=" + pageNumber;
+            x = $window.location.search;
+            alert(x);
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
