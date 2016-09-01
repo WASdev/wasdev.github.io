@@ -134,11 +134,10 @@ angular.module('app')
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if (response.headers!==null)
                 {if (response.headers('link').indexOf("next") >= 0) {
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
-                }}
+                }
                else {
                     generateFilters();
                     generateTags();
