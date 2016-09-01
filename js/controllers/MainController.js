@@ -131,7 +131,7 @@ angular.module('app')
             x = location.search;
             if (location.search == "?test")
             {
-              alert("working!");
+              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
             }
 
             github.getGitHubData(url, function(response) {
