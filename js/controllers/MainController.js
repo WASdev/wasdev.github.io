@@ -128,7 +128,7 @@ angular.module('app')
         //getting the data
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=90&page=" + pageNumber;
-            x = $window.location.search;
+            x = location.search;
             alert(x);
 
             github.getGitHubData(url, function(response) {
