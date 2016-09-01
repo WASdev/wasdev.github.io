@@ -129,7 +129,10 @@ angular.module('app')
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=90&page=" + pageNumber;
             x = location.search;
-            alert(x);
+            if (location.search == "?test")
+            {
+              alert("working!");
+            }
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
