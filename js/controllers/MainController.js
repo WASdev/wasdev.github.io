@@ -132,7 +132,7 @@ angular.module('app')
             }
             if (location.search == "?official")
             {
-              url = ""
+              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json";
             }
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
