@@ -130,6 +130,10 @@ angular.module('app')
             {
               url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
             }
+            if (location.search == "?official")
+            {
+              url = ""
+            }
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues ||
