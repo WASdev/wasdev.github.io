@@ -141,11 +141,6 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                 }
-                {
-                  generateFilters();
-                  generateTags();
-                  pushToArray();
-                }
             });
         }
 
