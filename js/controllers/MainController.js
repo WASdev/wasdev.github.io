@@ -129,8 +129,8 @@ angular.module('app')
             url = repoLocation + "?per_page=90&page=" + pageNumber;
             if (location.search == "?test")
             {
-              //url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
-              url = repoLocation + "?per_page=90&page=" + pageNumber;
+              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
+              //url = repoLocation + "?per_page=90&page=" + pageNumber;
             }
 
             github.getGitHubData(url, function(response) {
