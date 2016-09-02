@@ -138,12 +138,10 @@ angular.module('app')
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if (response.headers!==null){
                 if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues || 90 in was array 30 in mine?
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
-              }
                else {
                     generateFilters();
                     generateTags();
