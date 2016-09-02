@@ -125,18 +125,14 @@ angular.module('app')
 
         //getting the data
         getAllGitHubData = function() {
-            url = repoLocation + "?per_page=90&page=" + pageNumber;
-            paginate = 1;
+            url = repoLocation + "?per_page=100&page=" + pageNumber;
             if (location.search == "?test")
             {
-              paginate = 0;
-              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json" + "?per_page=90&page=" + pageNumber; //testing with pagination
+              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
             }
-
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if (paginate = 1){
-                if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues || 90 in was array 30 in mine?
+                if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues ||
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
@@ -144,8 +140,7 @@ angular.module('app')
                     generateFilters();
                     generateTags();
                     pushToArray();
-                }}
-                if (paginate = 0)
+                }
                 {
                   generateFilters();
                   generateTags();
