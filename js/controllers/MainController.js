@@ -85,6 +85,9 @@ angular.module('app')
         generateTags = function() {
             angular.forEach(repos, function(repo, index) {
                 //split the descriptions into individual words
+                if (repo.description==undefined){
+                  repo.description == null;
+                }
                 if (repo.description!==null){
                 var arrayOfWords = repo.description.split(' ');}
 
