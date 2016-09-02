@@ -143,11 +143,11 @@ angular.module('app')
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }}
-               else {
+               //else {
                     generateFilters();
                     generateTags();
                     pushToArray();
-                }
+                //}
             });
         }
 
