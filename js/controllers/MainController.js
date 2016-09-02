@@ -129,12 +129,13 @@ angular.module('app')
             url = repoLocation + "?per_page=90&page=" + pageNumber;
             if (location.search == "?test")
             {
-              url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
+              //url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
+              url = repoLocation + "?per_page=90&page=" + pageNumber;
             }
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if (response.headers('link').indexOf("next") >= 0) {
+                if (response.headers('link').indexOf("next") >= 0) { //This is apparently null with the other link - why
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
