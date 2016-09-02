@@ -88,7 +88,7 @@ angular.module('app')
                 if (repo.description==undefined){
                   repo.description == null;
                 }
-                if (repo.description!==null){
+                if ((repo.description!==null) && (repo.description!==undefined)){
                 var arrayOfWords = repo.description.split(' ');}
 
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
