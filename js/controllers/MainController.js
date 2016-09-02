@@ -138,7 +138,7 @@ angular.module('app')
 
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if ((response.headers!==null){
+                if (response.headers!==null){
                 if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
