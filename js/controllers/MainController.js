@@ -136,7 +136,10 @@ angular.module('app')
             }
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
+                if (location.search == null)
+                {
                 if (response.headers('link').indexOf("next") >= 0){ //This is apparently null with my file - pagination issues ||
+                  // indexOf just returns the letter position of the string as a number "this is a test" str.indexOf("is") =
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
@@ -145,7 +148,13 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                 }
-            });
+            }
+            else {
+              generateFilters();
+              generateTags();
+              pushToArray();
+            }
+          });
         }
 
         getAllGitHubData();
