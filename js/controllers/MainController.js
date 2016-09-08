@@ -99,12 +99,6 @@ angular.module('app')
                             $scope.arrayOfFilters.push(word);
                         }
                     }
-
-                    //seperate if to try next
-                  /*  if (word.indexOf("docker") > -1) {
-                      arrayOfTags[index] = word; //will this work or just push docker a zillion times
-                    }
-                    */
                 });
                 arrayOfWords = [];
             });
