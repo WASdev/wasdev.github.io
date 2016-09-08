@@ -110,7 +110,6 @@ angular.module('app')
         pushToArray = function() {
             angular.forEach(arrayOfPrefixes, function(prefix, index) {
                 var tags = [];
-                test++;
                 //add prefix to tags
                 tags.push(prefix);
                 //if tag is not null, add to tags
@@ -125,6 +124,12 @@ angular.module('app')
             });
         }
 
+        getNumOfRepos = function() {
+          angular.forEach(repos)
+          {
+            test++;
+          }
+        }
         //getting the data
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=100&page=" + pageNumber;
@@ -155,12 +160,13 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
-                      alert(test);
             }
           });
         }
 
         getAllGitHubData();
+        getNumOfRepos();
+        alert(test);
 
 
 }]);
