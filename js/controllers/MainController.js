@@ -9,6 +9,7 @@ angular.module('app')
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
+        var test;
 
        //set the url path to the filter
         $scope.click = function(filter) {
@@ -109,6 +110,7 @@ angular.module('app')
         pushToArray = function() {
             angular.forEach(arrayOfPrefixes, function(prefix, index) {
                 var tags = [];
+                test = test + 1;
                 //add prefix to tags
                 tags.push(prefix);
                 //if tag is not null, add to tags
@@ -158,5 +160,6 @@ angular.module('app')
         }
 
         getAllGitHubData();
+        alert(test);
 
 }]);
