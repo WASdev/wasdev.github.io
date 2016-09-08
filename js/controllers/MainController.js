@@ -171,6 +171,9 @@ angular.module('app')
         getAllGitHubData();
         getNumOfRepos();
         alert(test);
+        //testing my test function
+        test++;
+        test++;
 
 
 
