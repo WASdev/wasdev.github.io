@@ -10,6 +10,7 @@ angular.module('app')
         var path = $location.path();
         $scope.myFilter = path.slice(1);
         var test = 0;
+        console.log(repos.length);
 
        //set the url path to the filter
         $scope.click = function(filter) {
@@ -102,7 +103,7 @@ angular.module('app')
                     }
                 });
                 arrayOfWords = [];
-                $("Tester").html(repos.length);
+                //$("Tester").html(repos.length);
                 //document.querySelector('Tester').innerHTML = repos.length;
             });
         }
