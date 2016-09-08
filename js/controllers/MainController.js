@@ -73,7 +73,7 @@ angular.module('app')
 
 
                     /////////////////////////////////////////testing for lols
-                    if (word.indexOf("docker") > -1)
+                    if (repo.name.indexOf("docker") > -1)
                     {
                       prefix = "docker";
                     }
