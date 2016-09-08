@@ -102,7 +102,7 @@ angular.module('app')
                     }
                 });
                 arrayOfWords = [];
-                $("testing").html(repos.length);
+                $("Tester").html(repos.length);
             });
         }
 
