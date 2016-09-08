@@ -154,14 +154,15 @@ angular.module('app')
                     generateFilters();
                     generateTags();
                     pushToArray();
+                    getNumOfRepos();
+                                        alert(test);
                 }
             }
             else {
               generateFilters();
               generateTags();
               pushToArray();
-  getNumOfRepos();
-                      alert(test);
+
             }
           });
         }
