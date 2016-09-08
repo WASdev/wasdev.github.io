@@ -22,6 +22,7 @@ body {
 
 .githubFilter {
     display: inline-block;
+    vertical-align: bottom;
     color: #00649D;
     border: 2px solid #00649D;
     font-size: 11px;
@@ -33,7 +34,7 @@ body {
     margin-top: 5px;
     margin-right: 10px;
     padding: 10px;
-    text-align: centre;
+    text-align: left
     text-transform: uppercase;
     word-wrap: break-word;
     background-color: #FFF;
