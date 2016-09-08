@@ -103,7 +103,7 @@ angular.module('app')
                 });
                 arrayOfWords = [];
                 $("Tester").html(repos.length);
-                document.querySelector('.Tester').innerHTML = repos.length;
+                document.querySelector('Tester').innerHTML = repos.length;
             });
         }
 
