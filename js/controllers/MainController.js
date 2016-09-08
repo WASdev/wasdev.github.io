@@ -102,8 +102,6 @@ angular.module('app')
                     }
                 });
                 arrayOfWords = [];
-                //$("Tester").html(repos.length);
-                //document.querySelector('Tester').innerHTML = repos.length;
             });
         }
 
@@ -142,7 +140,6 @@ angular.module('app')
                 if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json"))
                 {
                 if (response.headers('link').indexOf("next") >= 0){
-                  // indexOf just returns the letter position of the string as a number "this is a test" str.indexOf("is") =
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
@@ -151,7 +148,6 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                     console.log(repos.length);
-                    /////////////////////////////////////////////////
 
                 }
             }
@@ -159,15 +155,12 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
-              //console.log(repos.length);
 
             }
           });
         }
 
         getAllGitHubData();
-
-        //alert(repos.length);
 
 
 
