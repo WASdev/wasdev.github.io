@@ -103,6 +103,7 @@ angular.module('app')
                 });
                 arrayOfWords = [];
                 $("Tester").html(repos.length);
+                document.querySelector('.Tester').innerHTML = repos.length;
             });
         }
 
@@ -163,7 +164,6 @@ angular.module('app')
         }
 
         getAllGitHubData();
-        //document.querySelector('.testing').innerHTML = 'repos.length';
 
         //alert(repos.length);
 
