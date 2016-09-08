@@ -155,11 +155,12 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
+                      alert(test);
             }
           });
         }
 
         getAllGitHubData();
-        alert(test);
+
 
 }]);
