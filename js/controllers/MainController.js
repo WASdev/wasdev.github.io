@@ -162,6 +162,8 @@ angular.module('app')
         }
 
         getAllGitHubData();
+        //document.querySelector('.testing').innerHTML = 'repos.length';
+        $("testing").html(repos.length);
         //alert(repos.length);
 
 
