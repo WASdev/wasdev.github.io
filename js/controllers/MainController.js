@@ -125,7 +125,7 @@ angular.module('app')
         }
 
         getNumOfRepos = function() {
-          angular.forEach(repos)
+          angular.forEach(repos, function(repo, index))
           {
             test++;
           }
