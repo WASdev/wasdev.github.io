@@ -151,7 +151,8 @@ angular.module('app')
                     console.log(repos.length);
 
                 }
-            }}
+            //}
+          }
             else {
               generateFilters();
               generateTags();
