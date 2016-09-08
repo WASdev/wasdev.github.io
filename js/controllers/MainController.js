@@ -139,7 +139,7 @@ angular.module('app')
             }
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json")
+                if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json"))
                 {
                 if (response.headers('link').indexOf("next") >= 0){
                   // indexOf just returns the letter position of the string as a number "this is a test" str.indexOf("is") =
