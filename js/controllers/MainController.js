@@ -159,6 +159,7 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
+              console.log(repos.length);
 
             }
           });
