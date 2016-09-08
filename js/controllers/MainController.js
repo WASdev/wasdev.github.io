@@ -125,10 +125,11 @@ angular.module('app')
         }
 
         getNumOfRepos = function() {
-          angular.forEach(repos, function(repo, index))
+          angular.forEach(repos, function(repo, index)
           {
             test++;
           }
+        )
         }
         //getting the data
         getAllGitHubData = function() {
