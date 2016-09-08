@@ -90,7 +90,7 @@ angular.module('app')
 
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
-                    if ((word.indexOf("#") > -1) || (word.indexOf("docker") > -1) {
+                    if ((word.indexOf("#") > -1) || (word.indexOf("docker") > -1)) {
                         //push to array containing all the tags
                         arrayOfTags[index] = word;
 
@@ -99,6 +99,12 @@ angular.module('app')
                             $scope.arrayOfFilters.push(word);
                         }
                     }
+
+                    //seperate if to try next
+                  /*  if (word.indexOf("docker") > -1) {
+                      arrayOfTags[index] = word; //will this work or just push docker a zillion times
+                    }
+                    */
                 });
                 arrayOfWords = [];
             });
