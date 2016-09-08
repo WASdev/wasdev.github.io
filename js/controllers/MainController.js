@@ -162,7 +162,7 @@ angular.module('app')
         }
 
         getAllGitHubData();
-        alert(repos.length);
+        //alert(repos.length);
 
 
 
