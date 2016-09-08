@@ -9,6 +9,7 @@ angular.module('app')
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
+        var test = 0;
 
        //set the url path to the filter
         $scope.click = function(filter) {
@@ -90,7 +91,7 @@ angular.module('app')
 
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
-                    if ((word.indexOf("#") > -1)) {
+                    if ((word.indexOf("#") > -1) || (word.indexOf("docker") > -1)) {
                         //push to array containing all the tags
                         arrayOfTags[index] = word;
 
@@ -137,6 +138,8 @@ angular.module('app')
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (location.search == null){
+                //if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json"))
+                //{
                 if (response.headers('link').indexOf("next") >= 0){
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
