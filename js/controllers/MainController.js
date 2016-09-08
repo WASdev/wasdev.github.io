@@ -110,7 +110,7 @@ angular.module('app')
         pushToArray = function() {
             angular.forEach(arrayOfPrefixes, function(prefix, index) {
                 var tags = [];
-                test = test + 1;
+                test++;
                 //add prefix to tags
                 tags.push(prefix);
                 //if tag is not null, add to tags
