@@ -124,13 +124,6 @@ angular.module('app')
             });
         }
 
-        getNumOfRepos = function() {
-          angular.forEach(repos, function(repo, index)
-          {
-            test++;
-          }
-        )
-        }
         //getting the data
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=100&page=" + pageNumber;
@@ -169,11 +162,7 @@ angular.module('app')
         }
 
         getAllGitHubData();
-        getNumOfRepos();
-        alert(test);
-        //testing my test function
-        test++;
-        test++;
+        alert(repos.length);
 
 
 
