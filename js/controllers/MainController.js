@@ -160,13 +160,15 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
+  getNumOfRepos();
+                      alert(test);
             }
           });
         }
 
         getAllGitHubData();
-        getNumOfRepos();
-        alert(test);
+
+
 
 
 }]);
