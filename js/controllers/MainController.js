@@ -71,14 +71,6 @@ angular.module('app')
                         break;
                     }
 
-
-                    /////////////////////////////////////////testing for lols
-                    if (repo.name.indexOf("docker") > -1)
-                    {
-                      prefix = "docker";
-                    }
-                    ////////////////////////////////////////////////
-
             //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
             arrayOfPrefixes.push(prefix);
             //if the prefix is unique, add to array of prefixes
