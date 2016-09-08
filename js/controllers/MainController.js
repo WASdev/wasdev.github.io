@@ -10,7 +10,6 @@ angular.module('app')
         var path = $location.path();
         $scope.myFilter = path.slice(1);
         var test = 0;
-        console.log(repos.length);
 
        //set the url path to the filter
         $scope.click = function(filter) {
@@ -140,7 +139,7 @@ angular.module('app')
             }
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
-                if (location.search == null)
+                if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json")
                 {
                 if (response.headers('link').indexOf("next") >= 0){
                   // indexOf just returns the letter position of the string as a number "this is a test" str.indexOf("is") =
