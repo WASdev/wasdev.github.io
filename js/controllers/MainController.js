@@ -73,7 +73,7 @@ angular.module('app')
 
                     if (repo.name.indexOf("docker") > -1)
                     {
-                      prefix=docker;
+                      prefix="docker";
                     }
 
             //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
