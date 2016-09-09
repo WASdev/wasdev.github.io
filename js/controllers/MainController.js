@@ -71,6 +71,11 @@ angular.module('app')
                         break;
                     }
 
+                    if (word.indexOf("docker") > -1)
+                    {
+                      prefix=docker;
+                    }
+
             //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
             arrayOfPrefixes.push(prefix);
             //if the prefix is unique, add to array of prefixes
@@ -91,7 +96,7 @@ angular.module('app')
 
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
-                    if ((word.indexOf("#") > -1) || (word.indexOf("docker") > -1)) {
+                    if (word.indexOf("#") > -1) {
                         //push to array containing all the tags
                         arrayOfTags[index] = word;
 
