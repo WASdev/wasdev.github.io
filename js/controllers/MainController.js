@@ -71,7 +71,7 @@ angular.module('app')
                         break;
                     }
 
-                    if (word.indexOf("docker") > -1)
+                    if (repo.name.indexOf("docker") > -1)
                     {
                       prefix=docker;
                     }
