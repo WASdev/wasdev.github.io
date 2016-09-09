@@ -17,11 +17,11 @@ body {
 }
 
 #githubCategories {
-    display: inline-block;
+    display: inline-table;
 }
 
 .githubFilter {
-	  display: inline-block;
+	  display: inline-table;
 		horizontal-align: left;
     color: #00649D;
     border: 2px solid #00649D;
