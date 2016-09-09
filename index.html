@@ -442,7 +442,7 @@ background: none repeat scroll 0% 0% white !important;
 		<div id="githubCategories">
             <div ng-click="click('')" ng-class="{githubFilterActive: myFilter == '', githubFilter: myFilter != ''}">All Repositories</div>
 						<!--<div ng-click="click(docker)" ng-class="{githubFilterActive: myFilter==filter, githubFilter: myFilter != filter}">docker</div>-->
-						<div ng="filter in arrayOfFilters track by %index" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter=filter, githubFilter: myFilter != filter}">docker</div>
+						<div "filter in arrayOfFilters track by %index" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter=filter, githubFilter: myFilter != filter}">docker</div>
             <div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration' || filter == 'libraries' || filer == 'docker' || filter.lastIndexOf('#') == 0 "
 						 ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter, githubFilter: myFilter!=filter}" ng-bind="filter">
 					  </div>
