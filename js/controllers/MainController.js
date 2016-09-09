@@ -145,19 +145,18 @@ angular.module('app')
                     getAllGitHubData();
                 }
                else {
+                    pushToArray();
                     generateFilters();
                     generateTags();
-                    pushToArray();
                     console.log(repos.length);
 
                 }
             //}
           }
             else {
+              pushToArray();
               generateFilters();
               generateTags();
-              pushToArray();
-
             }
           });
         }
