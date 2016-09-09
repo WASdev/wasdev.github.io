@@ -148,7 +148,8 @@ angular.module('app')
                     pushToArray();
                     generateFilters();
                     generateTags();
-                    console.log(repos.length);
+                    pushToArray();
+                    //console.log(repos.length);
 
                 }
             //}
@@ -157,6 +158,7 @@ angular.module('app')
               pushToArray();
               generateFilters();
               generateTags();
+              pushToArray();
             }
           });
         }
