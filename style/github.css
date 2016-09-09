@@ -17,7 +17,7 @@ body {
 }
 
 #githubCategories {
-    display: inline-table;
+    display: inline-block;
 }
 
 .githubFilter {
