@@ -1,6 +1,4 @@
 /*Adam Fielding's Custom CSS for the github repo page */
-
-*{margin:0;padding:0;}
 html, body {
 	height: 100%;
 }
@@ -19,10 +17,14 @@ body {
 
 #githubCategories {
     display: inline-table;
+		margin:0 auto;
+padding:0;
 }
 
 .githubFilter {
 	  display: inline-block;
+		margin:0 auto;
+padding:0;
 		horizontal-align: left;
     color: #00649D;
     border: 2px solid #00649D;
