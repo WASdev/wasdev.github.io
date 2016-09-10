@@ -17,14 +17,10 @@ body {
 
 #githubCategories {
     display: inline-table;
-		margin:0 auto;
-padding:0;
 }
 
 .githubFilter {
 	  display: inline-block;
-		margin:0 auto;
-padding:0;
 		horizontal-align: left;
     color: #00649D;
     border: 2px solid #00649D;
@@ -35,7 +31,7 @@ padding:0;
     letter-spacing: 1px;
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-right: 10px;
+    margin-right: 8px;
     padding: 10px;
     text-align: left;
     text-transform: uppercase;
