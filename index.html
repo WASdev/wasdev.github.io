@@ -444,7 +444,7 @@ background: none repeat scroll 0% 0% white !important;
 						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div>
 						<ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
-							githubFilter: myFilter!=filter}" ng-bind="filter"><
+							githubFilter: myFilter!=filter}" ng-bind="filter">
 					</div>
 
 	<div class="mtxl">
