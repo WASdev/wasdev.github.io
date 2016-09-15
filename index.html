@@ -441,10 +441,10 @@ background: none repeat scroll 0% 0% white !important;
 
 		<div id="githubCategories">
 						<!--<div style="position: absolute; top:230px; left:475px;" ng-click="click('')" ng-class="{githubFilterActive: myFilter=='', githubFilter: myFilter!=''}">All Repositories</div>-->
-						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">    ALL Repositories     </div><!--THIS LINE IS THE PROBLEM IT INSERTS A SPACE, WHY?????-->
+						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div><!--THIS LINE IS THE PROBLEM IT INSERTS A SPACE, WHY?????-->
 						<div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
-							githubFilter: myFilter!=filter}" ng-bind="filter"></div><
+							githubFilter: myFilter!=filter}" ng-bind="filter"></div>
 					</div>
 
 	<div class="mtxl">
