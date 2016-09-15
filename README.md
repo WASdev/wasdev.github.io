@@ -23,3 +23,6 @@ This is due to the small scope of the application.
 The [GitHub API paginates](https://developer.github.com/v3/#pagination) its responses to HTTP requests. The maximum number of repos displayed per page is 100. Therefore we need to make multiple requesets in order to obtain all the repositores. This is performed in the `getAllGitHubData()` function, by parsing the HTTP response header to see if it refers to a following page. Once there are no more pages, we call the three functions, `generateFilters`, `generateTags` and `pushToArray`.
 
 The primary functions within the controller deal with obtaining, parsing and formatting the list of repositories from the github organisation at [github.com/wasdev](github.com/wasdev)
+
+## Testing
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io> # [required])
