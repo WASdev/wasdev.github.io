@@ -70,6 +70,11 @@ angular.module('app')
                         break;
                     }
 
+                    if (repo.name.indexOf("docker") > -1)
+                    {
+                      prefix="docker";
+                    }
+
             //Add all prefixes to array of prefixes, to then later be pushed to arrayOfFiltersAndData
             arrayOfPrefixes.push(prefix);
             //if the prefix is unique, add to array of prefixes
@@ -90,7 +95,7 @@ angular.module('app')
 
                 angular.forEach(arrayOfWords, function(word, wordIndex) {
                     //check each word to see if it begins with a hash
-                    if ((word.indexOf("#") > -1)) {
+                    if (word.indexOf("#") > -1) {
                         //push to array containing all the tags
                         arrayOfTags[index] = word;
 
@@ -137,24 +142,27 @@ angular.module('app')
             github.getGitHubData(url, function(response) {
                 repos = repos.concat(response.data);
                 if (location.search == null){
+                //if ((url!= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json") || (url1= "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/official.json"))
+                //{
                 if (response.headers('link').indexOf("next") >= 0){
                     pageNumber = pageNumber + 1;
                     getAllGitHubData();
                 }
                else {
+                    pushToArray();
                     generateFilters();
                     generateTags();
                     pushToArray();
-                    console.log(repos.length);
+                    //console.log(repos.length);
 
                 }
             //}
           }
             else {
+              pushToArray();
               generateFilters();
               generateTags();
               pushToArray();
-
             }
           });
         }
