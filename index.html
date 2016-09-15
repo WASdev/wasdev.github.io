@@ -434,12 +434,12 @@ background: none repeat scroll 0% 0% white !important;
 		<section id="post-715" class="post-715 page type-page status-publish hentry">
 			<header class="pn-page-header">
 				<h1 class="pn-page-title">GitHub Repositories</h1>
+				<a href="https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io>" # [required]><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
 			</header>
 
             <form>
 			     <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
             </form>
-<a href="https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io>" # [required]><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>
 		<div id="githubCategories">
 						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div><div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
