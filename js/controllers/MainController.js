@@ -9,7 +9,6 @@ angular.module('app')
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
-        var test = 0;
 
        //set the url path to the filter
         $scope.click = function(filter) {
