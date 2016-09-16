@@ -446,7 +446,6 @@ background: none repeat scroll 0% 0% white !important;
 						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div><div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
 							githubFilter: myFilter!=filter}" ng-bind="filter"></div>
-							<!--<a href="https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io>" # [required]><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>-->
 					</div>
 
 	<div class="mtxl">

@@ -149,7 +149,7 @@ angular.module('app')
                     getAllGitHubData();
                 }
                else {
-                    pushToArray();
+                  //  pushToArray();
                     generateFilters();
                     generateTags();
                     pushToArray();
@@ -159,7 +159,7 @@ angular.module('app')
             //}
           }
             else {
-              pushToArray();
+            //  pushToArray();
               generateFilters();
               generateTags();
               pushToArray();
