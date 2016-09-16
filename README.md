@@ -26,3 +26,4 @@ The primary functions within the controller deal with obtaining, parsing and for
 
 ## Testing
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io> # [required])
+To test this website, either deploy to Bluemix or take a fork of this repo and push to your own GitHub page. In the 'MainController.js' file there are currently two query strings, '?test' and '?official', which currently link to a small test file and a raw copy of the official data (at the time the official.json file was created), respectively. You can add (or remove) as many of these query string parameters as you need and link them to raw json test data inside your repo to simulate any circumstances you require.
