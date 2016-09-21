@@ -6,24 +6,6 @@ angular.module('app')
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
 
-
-
-
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-
-        //paste this code under the head tag or in a separate js file.
-        	// Wait for window load
-        	$(window).load(function() {
-        		// Animate loader off screen
-        		$(".se-pre-con").fadeOut("slow");;
-        	});
-
-
-
-
-
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
