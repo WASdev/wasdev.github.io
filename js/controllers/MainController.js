@@ -6,6 +6,24 @@ angular.module('app')
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
 
+
+
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+        //paste this code under the head tag or in a separate js file.
+        	// Wait for window load
+        	$(window).load(function() {
+        		// Animate loader off screen
+        		$(".se-pre-con").fadeOut("slow");;
+        	});
+
+
+
+
+
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
@@ -49,6 +67,7 @@ angular.module('app')
 
         // code for filtering based on prefix in the repository name
         generateFilters = function() {
+          console.log(Date.now());
             angular.forEach(repos, function(repo, index) {
                 //get the prefix
                 var firstPeriodLocation = repo.name.indexOf(".");
@@ -120,7 +139,6 @@ angular.module('app')
                 if (arrayOfTags[index] != null) {
                     tags.push(arrayOfTags[index])
                 }
-
                 arrayOfFilteresAndData = {tags: tags, repositoryData: repos[index]};
 
                 //add to master array
@@ -132,6 +150,7 @@ angular.module('app')
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=100&page=" + pageNumber;
             if (location.search == "?test")
+            //if (location.search && location.search == "?test") not nuLL +
             {
               url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
             }
