@@ -6,7 +6,7 @@ angular.module('app')
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
         load.src='/images/loader.gif';
-        document.getElementById("githubCategories").appendChild(load);
+        //document.getElementById("githubCategories").appendChild(load);
         //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
