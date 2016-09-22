@@ -159,8 +159,7 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                     //console.log(repos.length);
-                    //img.src = null;
-                    div.removeChild(img);
+                    //div.removeChild(img);
 
                 }
             //}
@@ -170,10 +169,10 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
-              //img.src = null;
-              div.removeChild(img);
+              //div.removeChild(img);
             }
           });
+          div.removeChild(img);
         }
 
         getAllGitHubData();
