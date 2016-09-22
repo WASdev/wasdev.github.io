@@ -5,6 +5,12 @@ html, body {
 body {
         overflow-y: scroll;
 }
+
+.load {
+	position: absolute;
+	left: 500px;
+}
+
 .container {
 	display: table;
 	height: 100%;
