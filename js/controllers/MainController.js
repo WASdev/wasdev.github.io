@@ -5,8 +5,8 @@ angular.module('app')
         repos = [];
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
-        //$('#mySpinner').addClass('spinner');
-                //set the filter to the variable in the Url
+
+        //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
 
@@ -49,7 +49,6 @@ angular.module('app')
 
         // code for filtering based on prefix in the repository name
         generateFilters = function() {
-          console.log(Date.now());
             angular.forEach(repos, function(repo, index) {
                 //get the prefix
                 var firstPeriodLocation = repo.name.indexOf(".");
@@ -121,6 +120,7 @@ angular.module('app')
                 if (arrayOfTags[index] != null) {
                     tags.push(arrayOfTags[index])
                 }
+
                 arrayOfFilteresAndData = {tags: tags, repositoryData: repos[index]};
 
                 //add to master array
@@ -132,7 +132,6 @@ angular.module('app')
         getAllGitHubData = function() {
             url = repoLocation + "?per_page=100&page=" + pageNumber;
             if (location.search == "?test")
-            //if (location.search && location.search == "?test") not nuLL +
             {
               url = "https://raw.githubusercontent.com/BillyD73/billyd73.github.io/master/test.json";
             }
@@ -150,7 +149,7 @@ angular.module('app')
                     getAllGitHubData();
                 }
                else {
-                  //  pushToArray();
+                    pushToArray();
                     generateFilters();
                     generateTags();
                     pushToArray();
@@ -160,7 +159,7 @@ angular.module('app')
             //}
           }
             else {
-            //  pushToArray();
+              pushToArray();
               generateFilters();
               generateTags();
               pushToArray();
@@ -169,7 +168,6 @@ angular.module('app')
         }
 
         getAllGitHubData();
-        //$('#mySpinner').removeClass('spinner');
 
 
 

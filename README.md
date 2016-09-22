@@ -23,3 +23,7 @@ This is due to the small scope of the application.
 The [GitHub API paginates](https://developer.github.com/v3/#pagination) its responses to HTTP requests. The maximum number of repos displayed per page is 100. Therefore we need to make multiple requesets in order to obtain all the repositores. This is performed in the `getAllGitHubData()` function, by parsing the HTTP response header to see if it refers to a following page. Once there are no more pages, we call the three functions, `generateFilters`, `generateTags` and `pushToArray`.
 
 The primary functions within the controller deal with obtaining, parsing and formatting the list of repositories from the github organisation at [github.com/wasdev](github.com/wasdev)
+
+## Testing
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io> # [required])
+To test this website, either deploy to Bluemix or take a fork of this repo and push to your own GitHub page. In the 'MainController.js' file there are currently two query strings, '?test' and '?official', which currently link to a small test file and a raw copy of the official data (at the time the official.json file was created), respectively. You can add (or remove) as many of these query string parameters as you need and link them to raw json test data inside your repo to simulate any circumstances you require.
