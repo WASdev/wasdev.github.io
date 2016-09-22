@@ -8,7 +8,7 @@ angular.module('app')
         var img = new Image();
         var div = document.getElementById('load');
         img.onload = function() {
-        div.appendChild(img);
+        div.appendChild(img.style.left='500px');
         };
         img.src = 'images/loader.gif';
         //set the filter to the variable in the Url
