@@ -173,9 +173,10 @@ angular.module('app')
         }
 
         getAllGitHubData();
-        img.src = null;
 
 
 
 
 }]);
+
+img.src = null;
