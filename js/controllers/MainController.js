@@ -8,7 +8,7 @@ angular.module('app')
         var img = new Image();
         var div = document.getElementById('githubCategories');
         img.onload = function() {
-          div.appendChild(img);
+        div.appendChild(img);
         };
         img.src = 'images/loader.gif';
         //set the filter to the variable in the Url
@@ -159,6 +159,7 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                     //console.log(repos.length);
+                    img.src = null;
 
                 }
             //}
@@ -168,12 +169,12 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
+              img.src = null;
             }
           });
         }
 
         getAllGitHubData();
-        img.src = null;
 
 
 
