@@ -173,6 +173,7 @@ angular.module('app')
         }
 
         getAllGitHubData();
+        img.src = null;
 
 
 
