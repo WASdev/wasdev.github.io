@@ -172,7 +172,7 @@ angular.module('app')
               //div.removeChild(img);
             }
           });
-          div.removeChild(img);
+          //div.removeChild(img);
         }
 
         getAllGitHubData();
