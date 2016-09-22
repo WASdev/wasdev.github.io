@@ -169,10 +169,8 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
-              //div.removeChild(img);
             }
-          });
-          //div.removeChild(img);
+          div.removeChild(img);});
         }
 
         getAllGitHubData();
