@@ -6,7 +6,7 @@ angular.module('app')
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
         var img = new Image();
-        var div = document.getElementById('pnext-main');
+        var div = document.getElementById('load');
         img.onload = function() {
         div.appendChild(img);
         };
