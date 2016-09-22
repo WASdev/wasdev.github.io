@@ -442,8 +442,11 @@ background: none repeat scroll 0% 0% white !important;
             <form>
 			     <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
             </form>
+						<img src="images/loader.gif" style="width:304px;height:228px">
 		<div id="githubCategories">
-						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div><div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
+						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div>
+						<div ng-repeat="filter in arrayOfFilters track by $index">
+							<ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
 							githubFilter: myFilter!=filter}" ng-bind="filter"></div>
 					</div>
