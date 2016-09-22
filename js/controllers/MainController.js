@@ -5,8 +5,8 @@ angular.module('app')
         repos = [];
         pageNumber = 1;
         repoLocation = "https://api.github.com/orgs/WASdev/repos";
-
-        //set the filter to the variable in the Url
+        $('#mySpinner').addClass('spinner');
+                //set the filter to the variable in the Url
         var path = $location.path();
         $scope.myFilter = path.slice(1);
 
@@ -169,6 +169,7 @@ angular.module('app')
         }
 
         getAllGitHubData();
+        $('#mySpinner').removeClass('spinner');
 
 
 
