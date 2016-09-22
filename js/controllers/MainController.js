@@ -159,7 +159,8 @@ angular.module('app')
                     generateTags();
                     pushToArray();
                     //console.log(repos.length);
-                    img = null;
+                    //img.src = null;
+                    div.removeChild(img);
 
                 }
             //}
@@ -169,7 +170,8 @@ angular.module('app')
               generateFilters();
               generateTags();
               pushToArray();
-              img = null;
+              //img.src = null;
+              div.removeChild(img);
             }
           });
         }
