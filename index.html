@@ -24,26 +24,7 @@ Force IE8+ into Standards mode by default (now done with http header)
 <link rel="stylesheet" id="pnext_custom-css" href="style/wasdev.css" type="text/css" media="screen">
 <link rel="stylesheet" id="pnext_github-css" href="style/github.css" type="text/css" media="all">
 <script type="text/javascript" src="js/wasdev/jquery_002.js"></script>
-<!-- <link rel="stylesheet" id="wp-fullcalendar-css" href="style/main.css" type="text/css" media="all">
-<link rel="stylesheet" id="jquery-ui-css-css" href="style/jquery-ui.htm" type="text/css" media="all"> -->
-<!-- <link rel="stylesheet" id="jquery-ui-css-theme-css" href="style/theme.htm" type="text/css" media="all"> -->
 
-<!-- <link rel="stylesheet" id="pnext.utils-css" href="style/pnext-utils.css" type="text/css" media="all"> -->
-
-<!-- <link rel="stylesheet" id="genericons-css" href="style/genericons.css" type="text/css" media="all"> -->
-<!-- <link rel="stylesheet" id="jetpack_css-css" href="style/jetpack.css" type="text/css" media="all"> -->
-
-<!-- <script type="text/javascript" src="js/wasdev/core.js"></script> -->
-<!-- <script type="text/javascript" src="js/wasdev/widget.js"></script> -->
-<!-- <script type="text/javascript" src="js/wasdev/position.js"></script>
-<script type="text/javascript" src="js/wasdev/mouse.js"></script>
-<script type="text/javascript" src="js/wasdev/sortable.js"></script>
-<script type="text/javascript" src="js/wasdev/datepicker.js"></script>
-<script type="text/javascript" src="js/wasdev/menu.js"></script>
-<script type="text/javascript" src="js/wasdev/autocomplete.js"></script>
-<script type="text/javascript" src="js/wasdev/resizable.js"></script>
-<script type="text/javascript" src="js/wasdev/draggable.js"></script>
-<script type="text/javascript" src="js/wasdev/dialog.js"></script> -->
 <script type="text/javascript">
 /* <![CDATA[ */
 var EM = {"ajaxurl":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php","locationajaxurl":"https:\/\/developer.ibm.com\/wasdev\/wp-admin\/admin-ajax.php?action=locations_search","firstDay":"1","locale":"en","dateFormat":"dd\/mm\/yy","ui_css":"https:\/\/developer.ibm.com\/wasdev\/wp-content\/plugins\/events-manager\/includes\/css\/ui-lightness.css","show24hours":"1","is_ssl":"1","txt_search":"Search","txt_searching":"Searching...","txt_loading":"Loading...","event_reschedule_warning":"Are you sure you want to reschedule this recurring event? If you do this, you will lose all booking information and the old recurring events will be deleted.","event_detach_warning":"Are you sure you want to detach this event? By doing so, this event will be independent of the recurring set of events.","delete_recurrence_warning":"Are you sure you want to delete all recurrences of this event? All events will be moved to trash."};
@@ -338,81 +319,37 @@ background: none repeat scroll 0% 0% white !important;
 
     .pn-search {
     margin-top: 3;}
-
-    /*.pn-btn {
-      color: #fff !important;
-    }
-
-    .pn-btn,
-    .pn-btn-primary {
-      background-color: #5b2668;
-    }
-
-    .pn-btn:hover,
-    .pn-btn:focus,
-    .pn-btn-primary:hover,
-    .pn-btn-primary:focus {
-      background-color: #7c348d;
-    }
-
-    .pn-btn-secondary {
-
-      background-color: #26358f;
-    }
-
-    .pn-btn-secondary:hover,
-    .pn-btn-secondary:focus {
-      background-color: #3044b5;
-    }*/
-
-
     .pn-btn-nav-menu {
       vertical-align: middle;
       padding-left: 1.428571429em;
       padding-right: 1.428571429em;
     }
     </style>
-
     <div id="pnext-top-menu" class="pn-top-menu links-top-menu" role="navigation" aria-label="Main navigation">
       <div class="flag">
         <span class="link-home flag-img">
           <a rel="home" class="pn-nav-home" href="https://developer.ibm.com/wasdev"><img scale="0" class="pn-logo-image" src="assets/wasdev.png" alt="WASdev"></a>
         </span>
-
-
       </div>
     </div>
-
-    <div id="pnext-main" class="mbxl" role="main">
-
 	<div class="pn-pcon">
 		<section id="post-715" class="post-715 page type-page status-publish hentry">
-			<header class="pn-page-header">
 				<h1 class="pn-page-title">GitHub Repositories</h1>
-			</header>
-
-            <form>
-			     <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
-            </form>
-		<div id="githubCategories">
+		<div id="githubCategories" style="margin-top:10px;">
+			<form>
+		 <input ng-model="searchRepos" id="gitRepoFilter" type="text" placeholder="Filter Repositories" autofocus>
+			</form>
 						<div ng-click="click('')" ng-class="{gitHubFilterActive: myFilter=='', githubFilter: myFilter!=''}">ALL Repositories</div><div ng-repeat="filter in arrayOfFilters track by $index" ng-if="filter == 'samples' || filter == 'tools' || filter == 'continuous integration'
 						|| filter == 'libraries' || filter == 'docker' || filter.lastIndexOf('#') == 0" ng-click="click(filter)" ng-class="{githubFilterActive: myFilter==filter,
 							githubFilter: myFilter!=filter}" ng-bind="filter"></div>
-							<!--<a href="https://bluemix.net/deploy?repository=<https://github.com/WASdev/wasdev.github.io>" # [required]><img src="https://bluemix.net/deploy/button.png" alt="Deploy to Bluemix"></a>-->
-							<div id="load"></div>
 					</div>
-
-	<div class="mtxl">
-
-        <!-- where the views are inserted -->
         <div id="pn-repo-listing" class="pn-repo-listing" >
             <div class="pn-repo-item" data-tag="all">
-                <div class="pn-columns">
+                <div class="pn-columns" style="margin-top:30px;">
                     <div class="pn-col-6-4"><header class="pn-repo-header"></header><div class="pn-repo-content"></div></div>
                     <div class="pn-col-6-2">
                         <a id="sort" role="button" ng-click="changeOrder()">Last Updated <span ng-show="reverseSort">&#x25B2;</span>
                         <span ng-show="!reverseSort">&#x25BC;</span></a>
-
                     </div>
                 </div>
             </div>
@@ -435,16 +372,8 @@ background: none repeat scroll 0% 0% white !important;
                 </div>
             </div>
         </div>
-
-
-        <div id="moreIBMRepos">
 				<br> Problem with this page? Please report an issue <a href="https://github.com/WASdev/wasdev.github.io/issues/">here</a>.
-        </div>
-
 		</section>
-	</div>
-
-
 </div>  <!-- // centering class from header -->
 
 	<div style="display:none">
@@ -489,7 +418,6 @@ var WPGroHo = {"my_hash":""};
 </script>
 
 <div style="display: none;" class="pn-modal-overlay"></div><div style="display: none;" class="pn-modal"><div class="pn-modal-wrap"><div class="pn-modal-hd">Header Here</div><div class="pn-modal-bd"></div><div class="pn-modal-ft"></div><a href="#" class="pn-modal-close">x</a></div></div>
-</div>
 </div>
 </body>
 
