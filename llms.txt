@@ -1,0 +1,21 @@
+# WebSphere and Liberty Migration Knowledge Base
+> A curated, single-page knowledge base that contains links and resources to help you migrate a traditional WebSphere Application Server (tWAS) application to run on Open Liberty / WebSphere Liberty. Maintained by IBM. Share as https://ibm.biz/AppModKB
+This knowledge base collects official documentation, articles, videos, guides, and client case studies covering: a Liberty overview, Liberty architecture and operations, 
+the differences between Liberty and traditional WebSphere, how to plan and carry out a migration, the available migration tooling (Application Modernization Accelerator, Mono2Micro, Liberty Tools), and real-world case studies. 
+
+
+## Main content
+- [WebSphere and Liberty Migration Knowledge Base (full page)](https://wasdev.github.io/websphere-and-liberty/Home.html): The complete knowledge base with all categorized migration resources.
+- [Knowledge base source (Markdown)](https://raw.githubusercontent.com/WASdev/websphere-and-liberty/wiki-to-github-pages/docs/Home.md): Clean Markdown source of the page, ideal for LLM ingestion.
+## Key sections
+- [Liberty overview](https://wasdev.github.io/websphere-and-liberty/Home.html#liberty-overview): What Liberty is and why teams choose it.
+- [Differences between Liberty and WebSphere](https://wasdev.github.io/websphere-and-liberty/Home.html#differences-between-liberty-and-websphere): Architectural, operational, and application-framework differences.
+- [Getting to know Liberty](https://wasdev.github.io/websphere-and-liberty/Home.html#getting-to-know-liberty): Building and running apps on Liberty before migrating.
+- [Planning a migration](https://wasdev.github.io/websphere-and-liberty/Home.html#planning-a-migration): A step-by-step approach to modernization and the tools that help.
+- [How to migrate to Liberty](https://wasdev.github.io/websphere-and-liberty/Home.html#how-to-migrate-to-liberty): Migrating operations and applications, with topic-by-topic resources.
+- [Client case studies](https://wasdev.github.io/websphere-and-liberty/Home.html#client-case-studies): Real-world Liberty migration outcomes.
+## Authoritative sources
+- [Open Liberty documentation](https://openliberty.io/docs/latest/overview.html): Primary docs for Open Liberty (also applies to WebSphere Liberty).
+- [WebSphere Liberty documentation](https://www.ibm.com/docs/en/was-liberty/base): Docs for features only available in WebSphere Liberty.
+- [Open Liberty guides](https://openliberty.io/guides/): Hands-on developer guides.
+- [Liberty product page](https://www.ibm.com/products/liberty): IBM product overview.
