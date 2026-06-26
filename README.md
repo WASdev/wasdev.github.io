@@ -1,4 +1,4 @@
-# WASdev GitHub Pages
+# WASdev
 
 This repository hosts the GitHub Pages site for [wasdev.github.io](https://wasdev.github.io), providing essential resources for WebSphere and Liberty migration projects.
 
